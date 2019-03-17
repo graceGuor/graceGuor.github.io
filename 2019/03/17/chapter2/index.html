@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="1. 熵   如果X是一个离散型随机变量，取值空间为R，其概率分布为$ p(x) = P(X = x),x ∈ R$，那么X的熵（entropy）$ H(X)$定义为： 1H(X) = - \sum_&amp;#123;x ∈ R&amp;#125; &amp;#123;p(x)log_2p(x)&amp;#125; 其中，约定$ 0log0 = 0$。$ H(X)$可以写为$ H(p)$。之后将$ log_2p(x)$简写成">
+<meta name="description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第二章 信息论基本概念">
 <meta property="og:url" content="http://yoursite.com/2019/03/17/chapter2/index.html">
 <meta property="og:site_name" content="Grace">
-<meta property="og:description" content="1. 熵   如果X是一个离散型随机变量，取值空间为R，其概率分布为$ p(x) = P(X = x),x ∈ R$，那么X的熵（entropy）$ H(X)$定义为： 1H(X) = - \sum_&amp;#123;x ∈ R&amp;#125; &amp;#123;p(x)log_2p(x)&amp;#125; 其中，约定$ 0log0 = 0$。$ H(X)$可以写为$ H(p)$。之后将$ log_2p(x)$简写成">
+<meta property="og:description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T10:59:49.761Z">
+<meta property="og:updated_time" content="2019-03-17T11:14:50.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二章 信息论基本概念">
-<meta name="twitter:description" content="1. 熵   如果X是一个离散型随机变量，取值空间为R，其概率分布为$ p(x) = P(X = x),x ∈ R$，那么X的熵（entropy）$ H(X)$定义为： 1H(X) = - \sum_&amp;#123;x ∈ R&amp;#125; &amp;#123;p(x)log_2p(x)&amp;#125; 其中，约定$ 0log0 = 0$。$ H(X)$可以写为$ H(p)$。之后将$ log_2p(x)$简写成">
+<meta name="twitter:description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
 
 
 
@@ -361,7 +361,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T18:59:49+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T19:14:50+08:00">
                 2019-03-17
               </time>
             
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-17T18:59:49+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-17T19:14:50+08:00">
                 2019-03-17
               </time>
             
@@ -437,8 +437,9 @@
       
 
       
-        <a id="more"></a>
-<h2 id="1-熵">1. 熵</h2>
+        <p>本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。</p>
+<a id="more"></a>
+<h2 id="熵">熵</h2>
 <p>  如果X是一个离散型随机变量，取值空间为R，其概率分布为<code>$ p(x) = P(X = x),x ∈ R$</code>，那么X的<strong>熵（entropy）</strong><code>$ H(X)$</code>定义为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(X) = - \sum_&#123;x ∈ R&#125; &#123;p(x)log_2p(x)&#125;</span><br></pre></td></tr></table></figure>
 <p>其中，约定<code>$ 0log0 = 0$</code>。<code>$ H(X)$</code>可以写为<code>$ H(p)$</code>。之后将<code>$ log_2p(x)$</code>简写成<code>$ logp(x)$</code>。<br>
@@ -446,7 +447,7 @@
   <code>$ log(x)$</code>代表编码x需要的长度</p>
 <h5 id="为什么熵最大的模型是最符合事件真实分布的模型">为什么熵最大的模型是最符合事件真实分布的模型</h5>
 <p>  最大熵：整个系统是用无信息先验模型来进行拟合，现有数据是一些evidence，根据这些evidence不断更新先验知识，组成新的先验知识对新的数据进行模拟，除了已有的evidence之外，所有情况出现的概率应该是一致的，这种情况下熵最大，我们没有办法假设有些情况出现的概率更高，所以使得熵最大的模型能最真实的反应事件的分布情况</p>
-<h2 id="2-联合熵和条件熵">2. 联合熵和条件熵</h2>
+<h2 id="联合熵和条件熵">联合熵和条件熵</h2>
 <p>  如果X，Y是一对离散型随机变量X,Y ~ <code>$ p(x,y)$</code>，X，Y的<strong>联合熵（joint entropy）</strong><code>$ H(X,Y)$</code>定义为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(X,Y) = - \sum_&#123;x ∈ X&#125;\sum_&#123;y ∈ Y&#125; &#123;p(x,y)logp(x,y)&#125;</span><br></pre></td></tr></table></figure>
 <p>  给定随机变量X的情况下，随机变量Y的<strong>条件熵（conditional entropy）</strong> 定义为：</p>
@@ -458,7 +459,7 @@
 <p>这个数值称为<strong>熵率（entropy rate）</strong>。其中，变量 <strong><code>$ X_{1n}$</code></strong> 表示随机变量序列<code>$ (X_1,X_2,···,X_n)$</code>，<code>$ x_{1n} = (x_1,x_2,···,x_n)$</code>。<br>
   假定一种语言是由一系列符号组成的随机过程，<code>$ L(X_i)$</code>，例如，某报纸的一批语料，那么，我们可以定义这种<strong>语言L的熵作为其随机过程的熵率</strong>，即</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H_&#123;rate&#125;(L) = \lim_&#123;n \to \infty&#125; \frac&#123;1&#125;&#123;n&#125; H(X_1,X_2,···,X_n)</span><br></pre></td></tr></table></figure>
-<h2 id="3-互信息">3. 互信息</h2>
+<h2 id="互信息">互信息</h2>
 <p>  根据熵的连锁规则，有</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)</span><br></pre></td></tr></table></figure>
 <p>因此，</p>
@@ -468,7 +469,7 @@
   由于<code>$ H(X|X) = 0$</code>，因此</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(X) = H(X) - H(X|X) = I(X;Y)</span><br></pre></td></tr></table></figure>
 <p>  这一方面说明了为什么熵又叫自信息，另一方面说明了两个互相依赖的变量之间的互信息不是一个常量，而是取决于它们的熵。</p>
-<h2 id="4-相对熵">4. 相对熵</h2>
+<h2 id="相对熵">相对熵</h2>
 <p>   <strong>相对熵（relative entropy）</strong> 又称<strong>Kullback-Leibler差异</strong>（Kullback-Leibler divergence），或简称<strong>KL距离</strong>，是衡量相同事件空间里两个概率分布相对差距的测度。两个概率分布<code>$ p(x)$</code>和<code>$ q(x)$</code>的相对熵定义为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D(p||q) = \sum_&#123;x ∈ X&#125;&#123;p(x)log&#123;\frac&#123;p(x)&#125;&#123;q(x)&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>  该定义中约定<code>$ 0log(0/q) = 0$</code>，<code>$ qlog(q/0) = \infty$</code>，表示成期望值为：</p>
@@ -477,18 +478,18 @@
   显然，当两个随机分布完全相同时，即<code>$p = q$</code>，其相对熵为0。<br>
   互信息实际上就是衡量一个联合分布与独立性差距多大的测度：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I(X;Y) = D(p(x,y)||p(x)p(y))</span><br></pre></td></tr></table></figure>
-<h2 id="5-交叉熵">5. 交叉熵</h2>
+<h2 id="交叉熵">交叉熵</h2>
 <p>  如果一个随机变量X ~ <code>$ p(x)$</code>，<code>$ q(x)$</code>为用于近似<code>$ p(x)$</code>的概率分布，那么，随机变量X和模型<code>$ q$</code>之间的 <strong>交叉熵（cross entropy）</strong> 定义为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">H(X,q) = H(X) + D(p||q) = H(X,p) + D(p||q)</span><br><span class="line">= - \sum_&#123;x&#125; &#123;p(x)logq(x)&#125; </span><br><span class="line">= E_p \left(log&#123;\frac&#123;1&#125;&#123;q(x)&#125;&#125; \right)</span><br></pre></td></tr></table></figure>
 <p>  由此，可以定义语言L= (X) ~ <code>$ p(x)$</code>与其模型<code>$ q$</code>的交叉熵为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(L,q) ≈ -\frac&#123;1&#125;&#123;N&#125;log&#123;q(x_1^N)&#125;</span><br></pre></td></tr></table></figure>
 <p>  <strong>马尔可夫链</strong>：第n个词出现的概率只与1...n-1个词有关<br>
   <strong>稳态过程</strong>：第n个词出现的概率只与前n-1个词有关，与时间状态无关，比如句子：&quot;我 有 ... ,，我 有 ...&quot;，第一个“有”出现的概率为1/100，第二个“有”出现的概率也是1/100，与这个词出现在句首、句中还是句尾无关。</p>
-<h2 id="6-困惑度">6. 困惑度</h2>
+<h2 id="困惑度">困惑度</h2>
 <p>  给定语言L的样本<code>$ l_1^n = l_1,l_2,···,l_n$</code>，L的<strong>困惑度（perplexity）</strong><code>$PP_q$</code>定义为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PP_q = 2^&#123;H(L,q)&#125; </span><br><span class="line">≈ 2^&#123;-\frac&#123;1&#125;&#123;n&#125;log&#123;q(l_1^n&#125;)&#125;</span><br><span class="line">= [q(l_1^n)]^&#123;-\frac&#123;1&#125;&#123;n&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>  语言模型的任务就是寻找困惑度最小的模型，使其最接近真实语言的情况。</p>
-<h2 id="7-噪声信道模型">7. 噪声信道模型</h2>
+<h2 id="噪声信道模型">噪声信道模型</h2>
 <p>  香农（Claude Elwood Shannon）提出了<strong>噪声信道模型（noisy channel model）</strong>，其<strong>目标</strong>就是优化噪声信道中信号传输的吞吐量和准确率，其<strong>基本假设</strong>是一个信道的输出以一定的概率依赖于输入。<br>
   <strong>信道容量（capacity）</strong> 的定义如下，其基本思想是用降低传输速率来换取高保真通信的可能性。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = max_&#123;p(X)&#125;I(X;Y)</span><br></pre></td></tr></table></figure>
@@ -564,8 +565,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/26/hello-world/" rel="next" title="Hello World, this is grace's first blog.欢迎来到郭蕊的世界！">
-                <i class="fa fa-chevron-left"></i> Hello World, this is grace's first blog.欢迎来到郭蕊的世界！
+              <a href="/2019/03/17/chapter4/" rel="next" title="第四章 语料库与语言知识库">
+                <i class="fa fa-chevron-left"></i> 第四章 语料库与语言知识库
               </a>
             
           </div>
@@ -687,7 +688,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -731,7 +732,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-熵"><span class="nav-number">1.</span> <span class="nav-text">1. 熵</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么熵最大的模型是最符合事件真实分布的模型"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">为什么熵最大的模型是最符合事件真实分布的模型</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#2-联合熵和条件熵"><span class="nav-number">2.</span> <span class="nav-text">2. 联合熵和条件熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-互信息"><span class="nav-number">3.</span> <span class="nav-text">3. 互信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-相对熵"><span class="nav-number">4.</span> <span class="nav-text">4. 相对熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-交叉熵"><span class="nav-number">5.</span> <span class="nav-text">5. 交叉熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-困惑度"><span class="nav-number">6.</span> <span class="nav-text">6. 困惑度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-噪声信道模型"><span class="nav-number">7.</span> <span class="nav-text">7. 噪声信道模型</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#熵"><span class="nav-number">1.</span> <span class="nav-text">熵</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么熵最大的模型是最符合事件真实分布的模型"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">为什么熵最大的模型是最符合事件真实分布的模型</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#联合熵和条件熵"><span class="nav-number">2.</span> <span class="nav-text">联合熵和条件熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互信息"><span class="nav-number">3.</span> <span class="nav-text">互信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对熵"><span class="nav-number">4.</span> <span class="nav-text">相对熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交叉熵"><span class="nav-number">5.</span> <span class="nav-text">交叉熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#困惑度"><span class="nav-number">6.</span> <span class="nav-text">困惑度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#噪声信道模型"><span class="nav-number">7.</span> <span class="nav-text">噪声信道模型</span></a></li></div>
             
 
           </div>

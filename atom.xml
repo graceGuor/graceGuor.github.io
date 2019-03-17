@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-17T10:59:49.761Z</updated>
+  <updated>2019-03-17T11:14:50.434Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,17 +20,28 @@
     <title>第二章 信息论基本概念</title>
     <link href="http://yoursite.com/2019/03/17/chapter2/"/>
     <id>http://yoursite.com/2019/03/17/chapter2/</id>
-    <published>2019-03-17T10:59:49.000Z</published>
-    <updated>2019-03-17T10:59:49.761Z</updated>
+    <published>2019-03-17T11:14:50.000Z</published>
+    <updated>2019-03-17T11:14:50.434Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;1-熵&quot;&gt;1. 熵&lt;/h2&gt;
-&lt;p&gt;  如果X是一个离散型随机变量，取值空间为R，其概率分布为&lt;code&gt;$ p(x) = P(X = x),x ∈ R$&lt;/code&gt;，那么X的&lt;strong&gt;熵（entropy）&lt;/stron
-      
+      &lt;p&gt;本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第四章 语料库与语言知识库</title>
+    <link href="http://yoursite.com/2019/03/17/chapter4/"/>
+    <id>http://yoursite.com/2019/03/17/chapter4/</id>
+    <published>2019-03-17T11:12:03.000Z</published>
+    <updated>2019-03-17T11:16:44.521Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本章介绍两个语料库，英文语料库WordNet和中文语料库HowNet。&lt;/p&gt;
     
     </summary>
     
