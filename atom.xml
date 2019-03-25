@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T07:48:08.495Z</updated>
+  <updated>2019-03-25T11:08:08.203Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第五章 语言模型</title>
+    <link href="http://yoursite.com/2019/03/24/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C5/"/>
+    <id>http://yoursite.com/2019/03/24/统计自然语言处理C5/</id>
+    <published>2019-03-23T16:00:00.000Z</published>
+    <updated>2019-03-25T11:08:08.203Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。&lt;br&gt;
+  本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
+      <category term="语言模型" scheme="http://yoursite.com/tags/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="数据平滑" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E5%B9%B3%E6%BB%91/"/>
+    
+      <category term="n-gram" scheme="http://yoursite.com/tags/n-gram/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第二章 信息论基本概念</title>
-    <link href="http://yoursite.com/2019/03/17/chapter2/"/>
-    <id>http://yoursite.com/2019/03/17/chapter2/</id>
+    <link href="http://yoursite.com/2019/03/17/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C2/"/>
+    <id>http://yoursite.com/2019/03/17/统计自然语言处理C2/</id>
     <published>2019-03-17T11:14:50.000Z</published>
-    <updated>2019-03-18T07:48:08.495Z</updated>
+    <updated>2019-03-25T08:42:05.985Z</updated>
     
     <summary type="html">
     
@@ -29,15 +56,23 @@
     
     </summary>
     
+      <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
+      <category term="信息论" scheme="http://yoursite.com/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/"/>
+    
+      <category term="熵" scheme="http://yoursite.com/tags/%E7%86%B5/"/>
     
   </entry>
   
   <entry>
     <title>第四章 语料库与语言知识库</title>
-    <link href="http://yoursite.com/2019/03/17/chapter4/"/>
-    <id>http://yoursite.com/2019/03/17/chapter4/</id>
+    <link href="http://yoursite.com/2019/03/17/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C4/"/>
+    <id>http://yoursite.com/2019/03/17/统计自然语言处理C4/</id>
     <published>2019-03-17T11:12:03.000Z</published>
-    <updated>2019-03-17T11:16:44.521Z</updated>
+    <updated>2019-03-25T09:10:25.059Z</updated>
     
     <summary type="html">
     
@@ -45,6 +80,16 @@
     
     </summary>
     
+      <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
+      <category term="语料库" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%96%99%E5%BA%93/"/>
+    
+      <category term="WordNet" scheme="http://yoursite.com/tags/WordNet/"/>
+    
+      <category term="HowNet" scheme="http://yoursite.com/tags/HowNet/"/>
     
   </entry>
   

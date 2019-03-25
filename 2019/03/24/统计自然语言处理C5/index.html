@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="NLP,语言模型,数据平滑,n-gram,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
+<meta name="description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
+<meta name="keywords" content="NLP,语言模型,数据平滑,n-gram">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二章 信息论基本概念">
-<meta property="og:url" content="http://yoursite.com/2019/03/17/chapter2/index.html">
+<meta property="og:title" content="第五章 语言模型">
+<meta property="og:url" content="http://yoursite.com/2019/03/24/统计自然语言处理C5/index.html">
 <meta property="og:site_name" content="Grace">
-<meta property="og:description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
+<meta property="og:description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-18T07:48:08.495Z">
+<meta property="og:updated_time" content="2019-03-25T11:08:08.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二章 信息论基本概念">
-<meta name="twitter:description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
+<meta name="twitter:title" content="第五章 语言模型">
+<meta name="twitter:description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/17/chapter2/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/24/统计自然语言处理C5/">
 
 
 
 
 
-  <title>第二章 信息论基本概念 | Grace</title>
+  <title>第五章 语言模型 | Grace</title>
   
 
 
@@ -332,7 +333,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/chapter2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/统计自然语言处理C5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Grace">
@@ -349,7 +350,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">第二章 信息论基本概念</h2>
+          <h2 class="post-title" itemprop="name headline">第五章 语言模型</h2>
         
 
         <div class="post-meta">
@@ -361,8 +362,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T19:14:50+08:00">
-                2019-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T00:00:00+08:00">
+                2019-03-24
               </time>
             
 
@@ -377,12 +378,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T15:48:08+08:00">
-                2019-03-18
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T19:08:08+08:00">
+                2019-03-25
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/统计自然语言处理/" itemprop="url" rel="index">
+                    <span itemprop="name">统计自然语言处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -392,8 +415,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/17/chapter2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/chapter2/" itemprop="commentCount"></span>
+                <a href="/2019/03/24/统计自然语言处理C5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/24/统计自然语言处理C5/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,7 +424,7 @@
 
           
           
-             <span id="/2019/03/17/chapter2/" class="leancloud_visitors" data-flag-title="第二章 信息论基本概念">
+             <span id="/2019/03/24/统计自然语言处理C5/" class="leancloud_visitors" data-flag-title="第五章 语言模型">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -437,99 +460,135 @@
       
 
       
-        <p>本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。</p>
+        <p>  语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。<br>
+  本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。</p>
 <a id="more"></a>
-<h2 id="熵">熵</h2>
-<p>  如果X是一个离散型随机变量，取值空间为R，其概率分布为$ p(x) = P(X = x),x \in R$，那么X的<strong>熵（entropy）</strong> $ H(X)$定义为：<br>
+<h2 id="n元语法">n元语法</h2>
+<p>  一个语言模型通常构建为字符串 $ s$  的概率分布 $ p(s)$  ，这里 $ p(s)$  试图反映的是字符串 $ s$  作为一个句子出现的频率。<br>
+  对于一个由 $ l$  个<strong>基元</strong>（“基元”可以为字、词或短语等，为了表述方便，之后统一用“词”来通指）构成的句子 $ s = w_1w_2 \cdots w_l$  ，其概率计算公式可以表示为：
 $$
-H(X) = - \sum_{x \in R} {p(x) \log _2p(x)}
-$$
-其中，约定$ 0 \log 0 = 0$。$ H(X)$可以写为$ H(p)$。之后将$  \log _2p(x)$简写成$  \log p(x)$。<br>
-  熵又称为<strong>自信息（self-information）</strong>，可以视为描述一个随机变量所需的信息量<br>
-  $  \log (x)$代表编码x需要的长度</p>
-<h3 id="为什么熵最大的模型是最符合事件真实分布的模型">为什么熵最大的模型是最符合事件真实分布的模型</h3>
-<p>  最大熵：整个系统是用无信息先验模型来进行拟合，现有数据是一些evidence，根据这些evidence不断更新先验知识，组成新的先验知识对新的数据进行模拟，除了已有的evidence之外，所有情况出现的概率应该是一致的，这种情况下熵最大，我们没有办法假设有些情况出现的概率更高，所以使得熵最大的模型能最真实的反应事件的分布情况</p>
-<h2 id="联合熵和条件熵">联合熵和条件熵</h2>
-<p>  如果X，Y是一对离散型随机变量 $X,Y \sim p(x,y)$，X，Y的<strong>联合熵（joint entropy）</strong>$ H(X,Y)$定义为：
-$$
-H(X,Y) = - \sum_{x \in X}\sum_{y \in Y} {p(x,y) \log p(x,y)}
-$$
-  给定随机变量X的情况下，随机变量Y的<strong>条件熵（conditional entropy）</strong> 定义为：</p>
-<p>$$\begin{align}
-H(Y|X) &amp; = \sum_{x \in X}{p(x)H(Y|X=x)} \
-&amp; = \sum_{x \in X}{p(x)} \left[\sum_{y \in Y}p(y|x) \log (y|x) \right] \
-&amp; = -\sum_{x \in X}\sum_{y \in Y} {p(x,y) \log p(y|x)}
-\end{align}$$</p>
-<p>  <strong>熵的连锁规则</strong>：
-$$
-H(X_1,X_2,\cdots,X_n) = H(X_1) + H(X_2|X_1) + \cdots + H(X_n|X_1,\cdots,X_{n - 1})
-$$
-  一般地，对于一条长度为n的信息，<strong>每一个字符或字的熵</strong>为：
-$$
-H_{rate} = \frac{1}{n} H(X_{1n}) = - \frac{1}{n} \sum_{x_{1n}}{p(x_{1n}) \log p(x_{1n})}
-$$
-这个数值称为<strong>熵率（entropy rate）</strong>。其中，变量 <strong>$ X_{1n}$</strong> 表示随机变量序列$ (X_1,X_2,\cdots,X_n)$，$ x_{1n} = (x_1,x_2,\cdots,x_n)$。<br>
-  假定一种语言是由一系列符号组成的随机过程，$ L(X_i)$，例如，某报纸的一批语料，那么，我们可以定义这种<strong>语言L的熵作为其随机过程的熵率</strong>，即
-$$
-H_{rate}(L) = \lim_{n \to \infty} \frac{1}{n} H(X_1,X_2,\cdots,X_n)
+p(s) = p(w_1)p(w_2|w_1)p(w_3|w_1w_2) \cdots p(w_l|w_1 \cdots w_{l - 1})
+= \prod ^{l} _{i = 1} {p(w_i | w_1 \cdots w _{i-1} )}
 $$</p>
-<h2 id="互信息">互信息</h2>
-<p>  根据熵的连锁规则，有
-$$
-H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
-$$
-因此，
-$$
-H(X) - H(X|Y) = H(Y) - H(Y|X)
-$$
-这个差叫X和Y的<strong>互信息（mutual information）</strong>，记作$ I(X;Y)$。或者定义为：如果 $X,Y \sim p(x,y)$，则X，Y之间的互信息$ I(X;Y) = H(X) - H(X|Y)$。<br>
-  $I(X;Y)$反映的是在知道了Y的值之后X的不确定性的减少量。可以理解为Y的值透露了多少关于X的信息量。<br>
-  由于$ H(X|X) = 0$，因此
-$$
-H(X) = H(X) - H(X|X) = I(X;Y)
-$$
-  这一方面说明了为什么熵又叫自信息，另一方面说明了两个互相依赖的变量之间的互信息不是一个常量，而是取决于它们的熵。</p>
-<h2 id="相对熵">相对熵</h2>
-<p>   <strong>相对熵（relative entropy）</strong> 又称<strong>Kullback-Leibler差异</strong>（Kullback-Leibler divergence），或简称<strong>KL距离</strong>，是衡量相同事件空间里两个概率分布相对差距的测度。两个概率分布$ p(x)$和$ q(x)$的相对熵定义为：
-$$
-D(p||q) = \sum_{x \in X}{p(x) \log {\frac{p(x)}{q(x)}}}
-$$
-  该定义中约定$ 0 \log (0/q) = 0$，$ q \log (q/0) = \infty$，表示成期望值为：
-$$
-D(p||q) = E_p \left( \log {\frac{p(X)}{q(X)}} \right)
-$$
-  $  \log (p(x) / q(x))$ <strong>表示用分布p来编码需要的长度 - 用q来编码所需长度</strong><br>
-  显然，当两个随机分布完全相同时，即$p = q$，其相对熵为0。<br>
-  互信息实际上就是衡量一个联合分布与独立性差距多大的测度：
-$$
-I(X;Y) = D(p(x,y)||p(x)p(y))
+<p>式中，产生第 $ i$  个词的概率是由已经产生的 $ i - 1$  个词 $ w_1w_2 \cdots w_{i - 1}$  决定的。<br>
+  如果直接这么算的话，自由参数太多，我们几乎不可能从训练数据中正确地估计出这些参数，而且实际上，绝大多数历史根本就不可能在训练数据中出现。因此，为了解决这个问题，可以将历史 $ w_1w_2 \cdots w_{i - 1}$  按照某个法则映射到等价类 $ E(w_1w_2 \cdots w_{i - 1})$  ，而等价类的数目远远小于不同历史的数目。如将两个历史 $ w_{i - n + 2} \cdots w_{i - 1}w_i$  和 $ v_{k - n + 2} \cdots v_{k - 1}v_k$  映射到同一个等价类，当 $ n = 2$  时，即出现在第 $ i$  位上的词 $ w_i$  仅与它前面的一个历史词 $ w_{i-1}$  有关，二元文法模型被称为<strong>一阶马尔可夫链（Markov chain）</strong>，记作<strong>bigram</strong>或<strong>bi-gram</strong>。<br>
+  以bigram为例，如果用 $ c(w_{i-1}w_i)$   表示二元语法 $ w_{i-1}w_i$  在给定文本中的出现次数，则条件概率 $ p(w_i|w_{i-1})$  可以用如下公式计算：</p>
+<p>$$
+p(w_i|w_{i-1}) = \frac {c(w_{i-1}w_i)} { \sum _{w_i} {c(w _{i-1} w_i)} }
 $$</p>
-<h2 id="交叉熵">交叉熵</h2>
-<p>  如果一个随机变量X ~ $ p(x)$，$ q(x)$为用于近似$ p(x)$的概率分布，那么，随机变量X和模型$ q$之间的 <strong>交叉熵（cross entropy）</strong> 定义为：<br>
+<p>  对于n元语法模型，使用的训练语料的规模一般要有几百万个词。上式用于估计 $ p(w_i|w_{i-1})$  的方法称为 $ p(w_i|w_{i-1})$  的<strong>最大似然估计（maximum likelihood estimation，MLE）</strong>。</p>
+<h2 id="语言模型性能评价">语言模型性能评价</h2>
+<p>  交叉熵和困惑度越小越好。<br>
+  在英语文本中，n元语法模型计算的困惑度大约为50<sub>1000之间（对应的交叉熵范围为6</sub>10个比特位），具体值与文本的类型有关。</p>
+<h2 id="数据平滑">数据平滑</h2>
+<h3 id="问题的提出">问题的提出</h3>
+<p>  “数据平滑”是用来<strong>解决零概率问题</strong>的。“平滑”处理的基本思想是“劫富济贫”，即提高低概率（如零概率），降低高概率，尽量使概率分布趋于均匀。</p>
+<h3 id="加法平滑方法">加法平滑方法</h3>
+<p>  假设每一个n元词法发生的次数比实际统计次数多  $  \delta $  次， $ 0 \leq \delta \leq 1$  ，则<br>
 $$
-H(X,q) = H(X) + D(p||q) = H(X,p) + D(p||q)
-= - \sum_{x} {p(x)  \log  q(x)}
-= E_p \left( \log {\frac{1}{q(x)}} \right)
+p_{add}(w_i|w^{i-1}<em>{i-n+1}) =
+\frac { \delta + c(w</em>{i-n+1}^i)} { \delta |V| +  \sum <em>{w_i} {c(w</em>{i-n+1}^i)}}
+$$</p>
+<h3 id="古德-图灵-good-turing-估计法">古德-图灵（Good-Turing）估计法</h3>
+<p>  Good-Turing估计法是很多平滑技术的核心。其<strong>基本思路</strong>是：对于任何一个出现 $ r$  次n元语法，都假设它出现了 $ r^<em>$  次，这里
 $$
-  由此，可以定义语言 $L= (X) \sim p(x)$与其模型$ q$的交叉熵为：
+r^</em> = (r+1) \frac {n_{r+1}}{n_r}
 $$
-H(L,q) \approx -\frac{1}{N}  \log {q(x_1^N)}
+其中 $ n_r$  是训练预料中恰好出现 $ r$  次的 $ n$  元语法的数目。要把这个统计次数转化为概率，需要进行归一化处理：对于统计数为 $ r$  的 $ n$  元语法，其概率为
 $$
-  <strong>马尔可夫链</strong>：第n个词出现的概率只与 1 ... n-1 个词有关<br>
-  <strong>稳态过程</strong>：第n个词出现的概率只与前n-1个词有关，与时间状态无关，比如句子：&quot;我 有 ... ,，我 有 ...&quot;，第一个“有”出现的概率为1/100，第二个“有”出现的概率也是1/100，与这个词出现在句首、句中还是句尾无关。</p>
-<h2 id="困惑度">困惑度</h2>
-<p>  给定语言L的样本$ l_1^n = l_1,l_2,\cdots,l_n$，L的<strong>困惑度（perplexity）</strong> $PP_q$定义为：
+p_r = \frac {r_<em>}{N}
 $$
-PP_q = 2^{H(L,q)} \approx 2^{-\frac{1}{n}  \log  q(l_1^n)} = \left [ q(l_1^n) \right ]^{-\frac{1}{n}}
+其中 $ N = \sum <em>{r=0} ^{\infty} {n_r r</em></em>}$  。注意：
 $$
-  语言模型的任务就是寻找困惑度最小的模型，使其最接近真实语言的情况。</p>
-<h2 id="噪声信道模型">噪声信道模型</h2>
-<p>  香农（Claude Elwood Shannon）提出了<strong>噪声信道模型（noisy channel model）</strong>，其<strong>目标</strong>就是优化噪声信道中信号传输的吞吐量和准确率，其<strong>基本假设</strong>是一个信道的输出以一定的概率依赖于输入。<br>
-  <strong>信道容量（capacity）</strong> 的定义如下，其基本思想是用降低传输速率来换取高保真通信的可能性。
+N = \sum <em>{r=0} ^{\infty} {n_r r</em>*}
+= \sum <em>{r=0} ^{\infty} { (r+1) {n</em>{r+1}} }
+= \sum _{r=1} ^{\infty} {n_rr}
 $$
-C = \max_{p(X)}I(X;Y)
+也就是说， $ N$  等于这个分布中最初的计数。这样，样本中所有事件的概率之和为：
 $$
-  根据这个定义，如果能够设计一个输入编码X，其概率分布为$ p(X)$，使其输入与输出之间的互信息达到最大值，那么，我们的设计就达到了信道的最大传输容量。从数学上讲，信道容量C就是平均互信息量的最大值。</p>
+\sum _{r&gt;0} {n_r p_r}
+= \sum <em>{r&gt;0} { \frac {(r+1)n</em>{r+1}}{N}}
+=  \sum _{r&gt;1} { \frac {rn_r}{N}}
+= 1 - \frac {n_1}{N}
+&lt; 1
+$$
+因此，有 $  \frac {n_1}{N}$   的概率剩余量可以分配给所有未见过的事件（ $ r=0$  的事件）。<br>
+  Good-Turing方法不能实现高阶模型和低阶模型的结合，而高低阶模型的结合通常是获得较好的平滑效果所必须的。通常，Good-Turing方法作为一个基本方法，在其他平滑技术中得到了很好的应用。</p>
+<h3 id="katz平滑方法">Katz平滑方法</h3>
+<p>  1987年S. M. Katz提出了一种<strong>后备（back-off）平滑方法</strong>，简称<strong>Katz平滑方法</strong>。其<strong>基本思路</strong>是，当事件在样本中出现的频次大于某一数值 $ k$  时，运用最大似然估计法，通过减值来估计其概率值；而当事件的频次小于 $ k$  时，使用低阶的语法模型作为代替高阶语法模型的后备，但这种代替<strong>受归一化因子的约束</strong>。换句话说，就是<strong>将因减值而节省下来的概率根据低阶语法模型的分布情况分配给未见事件，而不是平均分配。</strong><br>
+  以bigram为例，对于一个出现次数为 $ r=c(w^i_{i-1})$  的二元语法 $ w^i_{i-1}$  ，使用如下公式计算修正的计数：
+$$
+p_{katz}(w^i_{i-1}) = \begin{cases}
+d_r \frac {c(w_{i-1}^i)} { c(w_{i-1}) }, &amp; \text {r&gt;0} \
+\alpha (w_{i-1}) p_{ML}(w_i), &amp; \text{r=0}
+\end{cases}
+$$
+也就是说，所有具有非零计数 $ r$  的二元语法都根据折扣 $ d_r$  被减值了，折扣率 $ d_r$  近似地等于 $ \frac {r_*}r$  ，这个减值是由Good-Turing估计方法预测的。式中， $ p_{ML}(w_i)$  为 $ w_i$  的最大似然估计概率， $ \alpha (w_{i-1})$  为一个合适的值。<br>
+  折扣率 $ d_r$  可以按照如下办法计算：由于大的计数值是可靠的，因此它们不需要进行减值。尤其对于某些 $ k$  ,S. M. Katz取所有 $ r&gt;k$  的情况下的 $ d_r = 1$  ，并且建议 $ k=5$  。对于 $ r \leq k$  的情况下的折扣率，减值率由用于全局二元语法的Good-Turing估计方法计算。</p>
+<h3 id="jelinek-mercer平滑方法">Jelinek-Mercer平滑方法</h3>
+<p>  以bigram为例，将二元文法模型和一元文法模型进行<strong>线性插值</strong>：
+$$
+p_{interp}(w_i|w_{i-1}) = \lambda p_{ML}(w_i|w_{i-1}) + (1- \lambda )p_{ML}(w_i)
+$$
+其中， $ 0 \leq \lambda \leq 1$  。<br>
+  对于多元语法模型，第 $ n$  阶平滑模型递归地定义为 $ n$  阶最大似然估计模型和 $ n-1$  阶平滑模型之间的线性插值：
+$$
+p_{interp}(w_i|w ^{i-1} _{i-n+1}) =
+\lambda _{w <em>{i-n+1} ^{i-1} } p</em>{ML}(w_i|w ^{i-1} _{i-n+1})</p>
+<ul>
+<li>(1- \lambda _{w <em>{i-n+1} ^{i-1}})p</em>{interp}(w ^{i-1} _{i-n+2})
+$$</li>
+</ul>
+<h3 id="绝对减值法">绝对减值法</h3>
+<p>  绝对减值法（absolute discounting）类似于Jelinek-Mercer平滑算法，涉及高阶和低阶模型的插值问题。然而，这种方法不是采用将高阶最大似然分布乘以因子 $ \lambda w <em>{i-n+1} ^{i-1}$  的方法，而是通过从每个非零计数中减去一个固定值 $ D \leq 1$  的方法来建立高阶分布。
+$$
+p</em>{abs}(w_i|w ^{i-1} _{i-n+1}) =
+\frac {\max{ c(w _{i-n+1} ^{i}) - D,0}}{ \sum _{w_i} c(w _{i-n+1} ^{i})}</p>
+<ul>
+<li>(1- \lambda _{w <em>{i-n+1} ^{i-1}})p</em>{abs}(w ^{i-1} _{i-n+2})
+$$
+这里假设 $ 0 \leq D \leq 1$  。</li>
+</ul>
+<h3 id="kneser-ney平滑方法">Kneser-Ney平滑方法</h3>
+<p>  这是一种扩展的绝对减值算法，用一种新的方式建立与高阶分布相结合的低阶分布。在前面的算法中，通常用平滑后的低阶最大似然分布作为低阶分布，在Kneser-Ney平滑方法中，<strong>分配给（以bigram为例）每个一元文法计数的数目就是它前面不同单词的数目</strong>。</p>
+<h3 id="修正的kneser-ney平滑方法">修正的Kneser-Ney平滑方法</h3>
+<p>  不像Kneser-Ney平滑方法那样对所有的非零计数都用一个减值参数 $ D$  ，而是<strong>对计数分别为1、2和大于等于3三种情况下的 $ n$  元模型分别采用3个不同的参数 $ D_1$  、 $ D_2$  、 $ D_{3+}$  。</strong></p>
+<h2 id="平滑方法的比较">平滑方法的比较</h2>
+<p>  不管训练语料规模多大，对于二元语法和三元语法而言，Kneser-Ney平滑方法和修正的Kneser-Ney平滑方法的效果都好于其他所有的平滑方法。</p>
+<h2 id="语言模型自适应方法">语言模型自适应方法</h2>
+<p>  在实际应用中，语言模型对跨领域的脆弱性和独立性假设的无效性是两个最明显的问题。<br>
+  为了提高语言模型对语料的领域、主题、类型等因素的适应性，提出了以下<strong>自适应语言模型</strong>。</p>
+<h3 id="基于缓存的语言模型">基于缓存的语言模型</h3>
+<p>  基于缓存的自适应模型<strong>针对的问题</strong>是，在文本中刚刚出现过的一些词在后边的句子中再次出现的可能性往往更大，比标准的 $ n$  元语法模型预测的概率要大。<br>
+  cache-based自适应方法的<strong>基本思路</strong>是：语言模型通过 $ n$  元语法的线性插值求得：
+$$
+\hat p(w_i|w_1 ^{i-1})
+= \lambda \hat p _{Cache} (w_i|w_1 ^{i-1})</p>
+<ul>
+<li>(1 - \lambda) \hat p <em>{n-gram} (w_i|w</em>{i-n+1} ^{i-1})
+$$
+  常用的方法是：在缓存中保留前面的 $ K$  个单词，每个词 $ w_i$  的概率（缓存概率）用其在缓存中出现的相对频率计算得出：
+$$
+\hat p _{Cache} (w_i|w_1 ^{i-1})
+= \frac {1}{K} \sum _{j=i-K} ^{i-1} {I _{w_j = w_i} }
+$$
+其中， $ I _{\epsilon}$  为指示器函数（indicator function）。如果 $ \epsilon$  表示的情况出现，则 $ I _{\epsilon} = 1$  ，否则， $ I _{\epsilon}=0$  。<br>
+  研究表明，缓存中<strong>每个词对当前词的影响随着与该词距离的增大呈指数级衰减</strong>，因此上式可写为：
+$$
+\hat p _{Cache} (w_i|w_1 ^{i-1})
+= \beta \sum _{j=1} ^{i-1} {I _{w_j = w_i} } e ^{- \alpha (i-j)}
+$$
+其中， $ \alpha$  为衰减率， $ \beta$  为归一化系数。</li>
+</ul>
+<h3 id="基于混合方法的语言模型">基于混合方法的语言模型</h3>
+<p>  <strong>针对的问题</strong>是：由于大规模训练语料本身是异源的，来自不同领域的语料存在一定的差异，而测试语料一般是同源的，因此，为了获得最佳性能，语言模型必须适应各种不同类型的语料对其性能的影响。<br>
+  基于混合方法的自适应语言模型的<strong>基本思想</strong>是：将语言模型划分成 $ n$  个子模型 $ M_1,M_2, \cdots, M_n$  ，整个语言模型的概率通过下式计算得到：
+$$
+\hat p(w_i|w_1 ^{i-1})
+= \sum _{j=1} ^n \lambda _j \hat p _{M_j} (w_i|w_1 ^{i-1})
+$$</p>
+<h3 id="基于最大熵的语言模型">基于最大熵的语言模型</h3>
+<p>  上面介绍的两种语言模型自适应方法都是分别建立各个子模型，然后将子模型的输出结合起来。基于最大熵的语言模型却采用不同的<strong>实现思路</strong>，即通过结合不同信息源的信息构建一个语言模型。每个信息源提供一组关于模型参数的约束条件，在所有满足约束的模型中，选择熵最大的模型。</p>
 
       
     </div>
@@ -579,7 +638,7 @@ $$
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/03/17/chapter2/" title="第二章 信息论基本概念">http://yoursite.com/2019/03/17/chapter2/</a>
+    <a href="http://yoursite.com/2019/03/24/统计自然语言处理C5/" title="第五章 语言模型">http://yoursite.com/2019/03/24/统计自然语言处理C5/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -592,6 +651,18 @@ $$
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/NLP/" rel="tag"># NLP</a>
+          
+            <a href="/tags/语言模型/" rel="tag"># 语言模型</a>
+          
+            <a href="/tags/数据平滑/" rel="tag"># 数据平滑</a>
+          
+            <a href="/tags/n-gram/" rel="tag"># n-gram</a>
+          
+        </div>
+      
 
       
       
@@ -601,8 +672,8 @@ $$
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/chapter4/" rel="next" title="第四章 语料库与语言知识库">
-                <i class="fa fa-chevron-left"></i> 第四章 语料库与语言知识库
+              <a href="/2019/03/17/统计自然语言处理C2/" rel="next" title="第二章 信息论基本概念">
+                <i class="fa fa-chevron-left"></i> 第二章 信息论基本概念
               </a>
             
           </div>
@@ -724,14 +795,32 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -768,7 +857,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#熵"><span class="nav-number">1.</span> <span class="nav-text">熵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么熵最大的模型是最符合事件真实分布的模型"><span class="nav-number">1.1.</span> <span class="nav-text">为什么熵最大的模型是最符合事件真实分布的模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联合熵和条件熵"><span class="nav-number">2.</span> <span class="nav-text">联合熵和条件熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互信息"><span class="nav-number">3.</span> <span class="nav-text">互信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对熵"><span class="nav-number">4.</span> <span class="nav-text">相对熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交叉熵"><span class="nav-number">5.</span> <span class="nav-text">交叉熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#困惑度"><span class="nav-number">6.</span> <span class="nav-text">困惑度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#噪声信道模型"><span class="nav-number">7.</span> <span class="nav-text">噪声信道模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#n元语法"><span class="nav-number">1.</span> <span class="nav-text">n元语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言模型性能评价"><span class="nav-number">2.</span> <span class="nav-text">语言模型性能评价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据平滑"><span class="nav-number">3.</span> <span class="nav-text">数据平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题的提出"><span class="nav-number">3.1.</span> <span class="nav-text">问题的提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加法平滑方法"><span class="nav-number">3.2.</span> <span class="nav-text">加法平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#古德-图灵-good-turing-估计法"><span class="nav-number">3.3.</span> <span class="nav-text">古德-图灵（Good-Turing）估计法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#katz平滑方法"><span class="nav-number">3.4.</span> <span class="nav-text">Katz平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jelinek-mercer平滑方法"><span class="nav-number">3.5.</span> <span class="nav-text">Jelinek-Mercer平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对减值法"><span class="nav-number">3.6.</span> <span class="nav-text">绝对减值法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kneser-ney平滑方法"><span class="nav-number">3.7.</span> <span class="nav-text">Kneser-Ney平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修正的kneser-ney平滑方法"><span class="nav-number">3.8.</span> <span class="nav-text">修正的Kneser-Ney平滑方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平滑方法的比较"><span class="nav-number">4.</span> <span class="nav-text">平滑方法的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言模型自适应方法"><span class="nav-number">5.</span> <span class="nav-text">语言模型自适应方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于缓存的语言模型"><span class="nav-number">5.1.</span> <span class="nav-text">基于缓存的语言模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于混合方法的语言模型"><span class="nav-number">5.2.</span> <span class="nav-text">基于混合方法的语言模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于最大熵的语言模型"><span class="nav-number">5.3.</span> <span class="nav-text">基于最大熵的语言模型</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -952,9 +1041,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2019/03/17/chapter2/';
-          this.page.identifier = '2019/03/17/chapter2/';
-          this.page.title = '第二章 信息论基本概念';
+          this.page.url = 'http://yoursite.com/2019/03/24/统计自然语言处理C5/';
+          this.page.identifier = '2019/03/24/统计自然语言处理C5/';
+          this.page.title = '第五章 语言模型';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Grace.disqus.com/embed.js';

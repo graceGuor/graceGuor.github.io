@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/chapter2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/24/统计自然语言处理C5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Grace">
@@ -348,7 +348,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/17/chapter2/" itemprop="url">第二章 信息论基本概念</a></h2>
+                <a class="post-title-link" href="/2019/03/24/统计自然语言处理C5/" itemprop="url">第五章 语言模型</a></h2>
         
 
         <div class="post-meta">
@@ -360,8 +360,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T19:14:50+08:00">
-                2019-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-24T00:00:00+08:00">
+                2019-03-24
               </time>
             
 
@@ -376,12 +376,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T15:48:08+08:00">
-                2019-03-18
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T19:08:08+08:00">
+                2019-03-25
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/统计自然语言处理/" itemprop="url" rel="index">
+                    <span itemprop="name">统计自然语言处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -391,8 +413,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/17/chapter2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/chapter2/" itemprop="commentCount"></span>
+                <a href="/2019/03/24/统计自然语言处理C5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/24/统计自然语言处理C5/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -400,7 +422,7 @@
 
           
           
-             <span id="/2019/03/17/chapter2/" class="leancloud_visitors" data-flag-title="第二章 信息论基本概念">
+             <span id="/2019/03/24/统计自然语言处理C5/" class="leancloud_visitors" data-flag-title="第五章 语言模型">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -432,10 +454,11 @@
 
       
         
-          <p>本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。</p>
+          <p>  语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。<br>
+  本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/03/17/chapter2/#more" rel="contents">
+            <a class="btn" href="/2019/03/24/统计自然语言处理C5/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -486,7 +509,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/chapter4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/统计自然语言处理C2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Grace">
@@ -505,7 +528,186 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/17/chapter4/" itemprop="url">第四章 语料库与语言知识库</a></h2>
+                <a class="post-title-link" href="/2019/03/17/统计自然语言处理C2/" itemprop="url">第二章 信息论基本概念</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T19:14:50+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T16:42:05+08:00">
+                2019-03-25
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/统计自然语言处理/" itemprop="url" rel="index">
+                    <span itemprop="name">统计自然语言处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/17/统计自然语言处理C2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/统计自然语言处理C2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/17/统计自然语言处理C2/" class="leancloud_visitors" data-flag-title="第二章 信息论基本概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/17/统计自然语言处理C2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/统计自然语言处理C4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Grace">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Grace">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/17/统计自然语言处理C4/" itemprop="url">第四章 语料库与语言知识库</a></h2>
         
 
         <div class="post-meta">
@@ -533,12 +735,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-17T19:16:44+08:00">
-                2019-03-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T17:10:25+08:00">
+                2019-03-25
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/统计自然语言处理/" itemprop="url" rel="index">
+                    <span itemprop="name">统计自然语言处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -548,8 +772,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/17/chapter4/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/chapter4/" itemprop="commentCount"></span>
+                <a href="/2019/03/17/统计自然语言处理C4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/统计自然语言处理C4/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +781,7 @@
 
           
           
-             <span id="/2019/03/17/chapter4/" class="leancloud_visitors" data-flag-title="第四章 语料库与语言知识库">
+             <span id="/2019/03/17/统计自然语言处理C4/" class="leancloud_visitors" data-flag-title="第四章 语料库与语言知识库">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -592,7 +816,7 @@
           <p>本章介绍两个语料库，英文语料库WordNet和中文语料库HowNet。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/03/17/chapter4/#more" rel="contents">
+            <a class="btn" href="/2019/03/17/统计自然语言处理C4/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -836,14 +1060,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="NLP,信息论,熵,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="AV.initialize(&quot;6OoSOzX5vOeEFB6tq7e2MKMe-gzGzoHsz&quot;, &quot;I0Y9otHEaYLd6STCMv1eP3I3&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Grace">
-<meta property="og:url" content="http://yoursite.com/top/index.html">
+<meta name="description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
+<meta name="keywords" content="NLP,信息论,熵">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二章 信息论基本概念">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/统计自然语言处理C2/index.html">
 <meta property="og:site_name" content="Grace">
-<meta property="og:description" content="AV.initialize(&quot;6OoSOzX5vOeEFB6tq7e2MKMe-gzGzoHsz&quot;, &quot;I0Y9otHEaYLd6STCMv1eP3I3&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
+<meta property="og:description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T06:27:35.205Z">
+<meta property="og:updated_time" content="2019-03-25T08:42:05.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Grace">
-<meta name="twitter:description" content="AV.initialize(&quot;6OoSOzX5vOeEFB6tq7e2MKMe-gzGzoHsz&quot;, &quot;I0Y9otHEaYLd6STCMv1eP3I3&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
+<meta name="twitter:title" content="第二章 信息论基本概念">
+<meta name="twitter:description" content="本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/top/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/17/统计自然语言处理C2/">
 
 
 
 
 
-  <title> | Grace</title>
+  <title>第二章 信息论基本概念 | Grace</title>
   
 
 
@@ -320,57 +321,377 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/统计自然语言处理C2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Grace">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Grace">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline"></h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div id="top"></div>
-<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script>AV.initialize("6OoSOzX5vOeEFB6tq7e2MKMe-gzGzoHsz", "I0Y9otHEaYLd6STCMv1eP3I3");</script>
-<script type="text/javascript">
-  var time=0
-  var title=""
-  var url=""
-  var query = new AV.Query('Counter');
-  query.notEqualTo('id',0);
-  query.descending('time');
-  query.limit(1000);
-  query.find().then(function (todo) {
-    for (var i=0;i<1000;i++){
-      var result=todo[i].attributes;
-      time=result.time;
-      title=result.title;
-      url=result.url;
-      // var content="<a href='"+"https://hoxis.github.io"+url+"'>"+title+"</a>"+"<br>"+"<font color='#fff'>"+"阅读次数："+time+"</font>"+"<br><br>";
-      var content="<p>"+"<font color='#1C1C1C'>"+"【文章热度:"+time+"℃】"+"</font>"+"<a href='"+"https://hoxis.github.io"+url+"'>"+title+"</a>"+"</p>";
-      document.getElementById("top").innerHTML+=content
-    }
-  }, function (error) {
-    console.log("error");
-  });
-</script>
+          <h2 class="post-title" itemprop="name headline">第二章 信息论基本概念</h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T19:14:50+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T16:42:05+08:00">
+                2019-03-25
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/统计自然语言处理/" itemprop="url" rel="index">
+                    <span itemprop="name">统计自然语言处理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/17/统计自然语言处理C2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/17/统计自然语言处理C2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/17/统计自然语言处理C2/" class="leancloud_visitors" data-flag-title="第二章 信息论基本概念">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>本章介绍信息论的一些基本概念，如熵、联合熵、条件熵、互信息、相对熵、交叉熵、困惑度，以及噪声信道模型。</p>
+<a id="more"></a>
+<h2 id="熵">熵</h2>
+<p>  如果X是一个离散型随机变量，取值空间为R，其概率分布为$ p(x) = P(X = x),x \in R$，那么X的<strong>熵（entropy）</strong> $ H(X)$定义为：<br>
+$$
+H(X) = - \sum_{x \in R} {p(x) \log _2p(x)}
+$$
+其中，约定$ 0 \log 0 = 0$。$ H(X)$可以写为$ H(p)$。之后将$  \log _2p(x)$简写成$  \log p(x)$。<br>
+  熵又称为<strong>自信息（self-information）</strong>，可以视为描述一个随机变量所需的信息量<br>
+  $  \log (x)$代表编码x需要的长度</p>
+<h3 id="为什么熵最大的模型是最符合事件真实分布的模型">为什么熵最大的模型是最符合事件真实分布的模型</h3>
+<p>  最大熵：整个系统是用无信息先验模型来进行拟合，现有数据是一些evidence，根据这些evidence不断更新先验知识，组成新的先验知识对新的数据进行模拟，除了已有的evidence之外，所有情况出现的概率应该是一致的，这种情况下熵最大，我们没有办法假设有些情况出现的概率更高，所以使得熵最大的模型能最真实的反应事件的分布情况</p>
+<h2 id="联合熵和条件熵">联合熵和条件熵</h2>
+<p>  如果X，Y是一对离散型随机变量 $X,Y \sim p(x,y)$，X，Y的<strong>联合熵（joint entropy）</strong>$ H(X,Y)$定义为：
+$$
+H(X,Y) = - \sum_{x \in X}\sum_{y \in Y} {p(x,y) \log p(x,y)}
+$$
+  给定随机变量X的情况下，随机变量Y的<strong>条件熵（conditional entropy）</strong> 定义为：</p>
+<p>$$
+H(Y|X) = \sum_{x \in X}{p(x)H(Y|X=x)}
+= \sum_{x \in X}{p(x)} \left[\sum_{y \in Y}p(y|x) \log (y|x) \right]
+= -\sum_{x \in X}\sum_{y \in Y} {p(x,y) \log p(y|x)}
+$$</p>
+<p>  <strong>熵的连锁规则</strong>：
+$$
+H(X_1,X_2,\cdots,X_n) = H(X_1) + H(X_2|X_1) + \cdots + H(X_n|X_1,\cdots,X_{n - 1})
+$$
+  一般地，对于一条长度为n的信息，<strong>每一个字符或字的熵</strong>为：
+$$
+H_{rate} = \frac{1}{n} H(X_{1n}) = - \frac{1}{n} \sum_{x_{1n}}{p(x_{1n}) \log p(x_{1n})}
+$$
+这个数值称为<strong>熵率（entropy rate）</strong>。其中，变量 <strong>$ X_{1n}$</strong> 表示随机变量序列$ (X_1,X_2,\cdots,X_n)$，$ x_{1n} = (x_1,x_2,\cdots,x_n)$。<br>
+  假定一种语言是由一系列符号组成的随机过程，$ L(X_i)$，例如，某报纸的一批语料，那么，我们可以定义这种<strong>语言L的熵作为其随机过程的熵率</strong>，即
+$$
+H_{rate}(L) = \lim_{n \to \infty} \frac{1}{n} H(X_1,X_2,\cdots,X_n)
+$$</p>
+<h2 id="互信息">互信息</h2>
+<p>  根据熵的连锁规则，有
+$$
+H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
+$$
+因此，
+$$
+H(X) - H(X|Y) = H(Y) - H(Y|X)
+$$
+这个差叫X和Y的<strong>互信息（mutual information）</strong>，记作$ I(X;Y)$。或者定义为：如果 $X,Y \sim p(x,y)$，则X，Y之间的互信息$ I(X;Y) = H(X) - H(X|Y)$。<br>
+  $I(X;Y)$反映的是在知道了Y的值之后X的不确定性的减少量。可以理解为Y的值透露了多少关于X的信息量。<br>
+  由于$ H(X|X) = 0$，因此
+$$
+H(X) = H(X) - H(X|X) = I(X;Y)
+$$
+  这一方面说明了为什么熵又叫自信息，另一方面说明了两个互相依赖的变量之间的互信息不是一个常量，而是取决于它们的熵。</p>
+<h2 id="相对熵">相对熵</h2>
+<p>   <strong>相对熵（relative entropy）</strong> 又称<strong>Kullback-Leibler差异</strong>（Kullback-Leibler divergence），或简称<strong>KL距离</strong>，是衡量相同事件空间里两个概率分布相对差距的测度。两个概率分布$ p(x)$和$ q(x)$的相对熵定义为：
+$$
+D(p||q) = \sum_{x \in X}{p(x) \log {\frac{p(x)}{q(x)}}}
+$$
+  该定义中约定$ 0 \log (0/q) = 0$，$ q \log (q/0) = \infty$，表示成期望值为：
+$$
+D(p||q) = E_p \left( \log {\frac{p(X)}{q(X)}} \right)
+$$
+  $  \log (p(x) / q(x))$ <strong>表示用分布p来编码需要的长度 - 用q来编码所需长度</strong><br>
+  显然，当两个随机分布完全相同时，即$p = q$，其相对熵为0。<br>
+  互信息实际上就是衡量一个联合分布与独立性差距多大的测度：
+$$
+I(X;Y) = D(p(x,y)||p(x)p(y))
+$$</p>
+<h2 id="交叉熵">交叉熵</h2>
+<p>  如果一个随机变量X ~ $ p(x)$，$ q(x)$为用于近似$ p(x)$的概率分布，那么，随机变量X和模型$ q$之间的 <strong>交叉熵（cross entropy）</strong> 定义为：<br>
+$$
+H(X,q) = H(X) + D(p||q) = H(X,p) + D(p||q)
+= - \sum_{x} {p(x)  \log  q(x)}
+= E_p \left( \log {\frac{1}{q(x)}} \right)
+$$
+  由此，可以定义语言 $L= (X) \sim p(x)$与其模型$ q$的交叉熵为：
+$$
+H(L,q) \approx -\frac{1}{N}  \log {q(x_1^N)}
+$$
+  <strong>马尔可夫链</strong>：第n个词出现的概率只与 1 ... n-1 个词有关<br>
+  <strong>稳态过程</strong>：第n个词出现的概率只与前n-1个词有关，与时间状态无关，比如句子：&quot;我 有 ... ,，我 有 ...&quot;，第一个“有”出现的概率为1/100，第二个“有”出现的概率也是1/100，与这个词出现在句首、句中还是句尾无关。</p>
+<h2 id="困惑度">困惑度</h2>
+<p>  给定语言L的样本$ l_1^n = l_1,l_2,\cdots,l_n$，L的<strong>困惑度（perplexity）</strong> $PP_q$定义为：
+$$
+PP_q = 2^{H(L,q)} \approx 2^{-\frac{1}{n}  \log  q(l_1^n)} = \left [ q(l_1^n) \right ]^{-\frac{1}{n}}
+$$
+  语言模型的任务就是寻找困惑度最小的模型，使其最接近真实语言的情况。</p>
+<h2 id="噪声信道模型">噪声信道模型</h2>
+<p>  香农（Claude Elwood Shannon）提出了<strong>噪声信道模型（noisy channel model）</strong>，其<strong>目标</strong>就是优化噪声信道中信号传输的吞吐量和准确率，其<strong>基本假设</strong>是一个信道的输出以一定的概率依赖于输入。<br>
+  <strong>信道容量（capacity）</strong> 的定义如下，其基本思想是用降低传输速率来换取高保真通信的可能性。
+$$
+C = \max_{p(X)}I(X;Y)
+$$
+  根据这个定义，如果能够设计一个输入编码X，其概率分布为$ p(X)$，使其输入与输出之间的互信息达到最大值，那么，我们的设计就达到了信道的最大传输容量。从数学上讲，信道容量C就是平均互信息量的最大值。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Grace 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Grace 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Grace
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/03/17/统计自然语言处理C2/" title="第二章 信息论基本概念">http://yoursite.com/2019/03/17/统计自然语言处理C2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/" rel="external nofollow" target="_blank">CC BY 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NLP/" rel="tag"># NLP</a>
+          
+            <a href="/tags/信息论/" rel="tag"># 信息论</a>
+          
+            <a href="/tags/熵/" rel="tag"># 熵</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/17/统计自然语言处理C4/" rel="next" title="第四章 语料库与语言知识库">
+                <i class="fa fa-chevron-left"></i> 第四章 语料库与语言知识库
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/24/统计自然语言处理C5/" rel="prev" title="第五章 语言模型">
+                第五章 语言模型 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -413,8 +734,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,6 +813,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#熵"><span class="nav-number">1.</span> <span class="nav-text">熵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么熵最大的模型是最符合事件真实分布的模型"><span class="nav-number">1.1.</span> <span class="nav-text">为什么熵最大的模型是最符合事件真实分布的模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联合熵和条件熵"><span class="nav-number">2.</span> <span class="nav-text">联合熵和条件熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互信息"><span class="nav-number">3.</span> <span class="nav-text">互信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相对熵"><span class="nav-number">4.</span> <span class="nav-text">相对熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交叉熵"><span class="nav-number">5.</span> <span class="nav-text">交叉熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#困惑度"><span class="nav-number">6.</span> <span class="nav-text">困惑度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#噪声信道模型"><span class="nav-number">7.</span> <span class="nav-text">噪声信道模型</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -661,9 +1007,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/top/index.html';
-          this.page.identifier = 'top/index.html';
-          this.page.title = '';
+          this.page.url = 'http://yoursite.com/2019/03/17/统计自然语言处理C2/';
+          this.page.identifier = '2019/03/17/统计自然语言处理C2/';
+          this.page.title = '第二章 信息论基本概念';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Grace.disqus.com/embed.js';
