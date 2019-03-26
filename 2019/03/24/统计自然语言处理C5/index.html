@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Grace">
 <meta property="og:description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-25T11:08:08.203Z">
+<meta property="og:updated_time" content="2019-03-26T03:02:40.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第五章 语言模型">
 <meta name="twitter:description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
@@ -378,8 +378,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T19:08:08+08:00">
-                2019-03-25
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-26T11:02:40+08:00">
+                2019-03-26
               </time>
             
           </span>
@@ -479,37 +479,37 @@ $$</p>
 <p>  对于n元语法模型，使用的训练语料的规模一般要有几百万个词。上式用于估计 $ p(w_i|w_{i-1})$  的方法称为 $ p(w_i|w_{i-1})$  的<strong>最大似然估计（maximum likelihood estimation，MLE）</strong>。</p>
 <h2 id="语言模型性能评价">语言模型性能评价</h2>
 <p>  交叉熵和困惑度越小越好。<br>
-  在英语文本中，n元语法模型计算的困惑度大约为50<sub>1000之间（对应的交叉熵范围为6</sub>10个比特位），具体值与文本的类型有关。</p>
+  在英语文本中，n元语法模型计算的困惑度大约为 $50 \sim 1000 $ 之间（对应的交叉熵范围为 $6\sim 10$ 个比特位），具体值与文本的类型有关。</p>
 <h2 id="数据平滑">数据平滑</h2>
 <h3 id="问题的提出">问题的提出</h3>
 <p>  “数据平滑”是用来<strong>解决零概率问题</strong>的。“平滑”处理的基本思想是“劫富济贫”，即提高低概率（如零概率），降低高概率，尽量使概率分布趋于均匀。</p>
 <h3 id="加法平滑方法">加法平滑方法</h3>
 <p>  假设每一个n元词法发生的次数比实际统计次数多  $  \delta $  次， $ 0 \leq \delta \leq 1$  ，则<br>
 $$
-p_{add}(w_i|w^{i-1}<em>{i-n+1}) =
-\frac { \delta + c(w</em>{i-n+1}^i)} { \delta |V| +  \sum <em>{w_i} {c(w</em>{i-n+1}^i)}}
+p _{add} (w_i|w ^{i-1} _{i-n+1}) =
+\frac { \delta + c(w _{i-n+1} ^i)} { \delta |V| +  \sum _{w_i} {c(w _{i-n+1} ^i)}}
 $$</p>
 <h3 id="古德-图灵-good-turing-估计法">古德-图灵（Good-Turing）估计法</h3>
-<p>  Good-Turing估计法是很多平滑技术的核心。其<strong>基本思路</strong>是：对于任何一个出现 $ r$  次n元语法，都假设它出现了 $ r^<em>$  次，这里
+<p>  Good-Turing估计法是很多平滑技术的核心。其<strong>基本思路</strong>是：对于任何一个出现 $ r$  次n元语法，都假设它出现了 $ r^* $  次，这里
 $$
-r^</em> = (r+1) \frac {n_{r+1}}{n_r}
+r^* = (r+1) \frac {n_{r+1}}{n_r}
 $$
 其中 $ n_r$  是训练预料中恰好出现 $ r$  次的 $ n$  元语法的数目。要把这个统计次数转化为概率，需要进行归一化处理：对于统计数为 $ r$  的 $ n$  元语法，其概率为
 $$
-p_r = \frac {r_<em>}{N}
+p_r = \frac { r^* }{N}
 $$
-其中 $ N = \sum <em>{r=0} ^{\infty} {n_r r</em></em>}$  。注意：
+其中 $ N = \sum _{r=0} ^{\infty} {n_r r^* } $  。注意：
 $$
-N = \sum <em>{r=0} ^{\infty} {n_r r</em>*}
-= \sum <em>{r=0} ^{\infty} { (r+1) {n</em>{r+1}} }
-= \sum _{r=1} ^{\infty} {n_rr}
+N = \sum _{r=0} ^{ \infty } {n_r r^* }
+= \sum _{r=0} ^{ \infty } { (r+1) { n _{r+1}} }
+= \sum _{r=1} ^{ \infty } {n_rr}
 $$
 也就是说， $ N$  等于这个分布中最初的计数。这样，样本中所有事件的概率之和为：
 $$
 \sum _{r&gt;0} {n_r p_r}
-= \sum <em>{r&gt;0} { \frac {(r+1)n</em>{r+1}}{N}}
-=  \sum _{r&gt;1} { \frac {rn_r}{N}}
-= 1 - \frac {n_1}{N}
+= \sum _{r&gt;0} { \frac {(r+1) n _{r+1} } {N}}
+=  \sum _{r&gt;1} { \frac {rn_r} {N} }
+= 1 - \frac {n_1} {N}
 &lt; 1
 $$
 因此，有 $  \frac {n_1}{N}$   的概率剩余量可以分配给所有未见过的事件（ $ r=0$  的事件）。<br>
@@ -518,37 +518,30 @@ $$
 <p>  1987年S. M. Katz提出了一种<strong>后备（back-off）平滑方法</strong>，简称<strong>Katz平滑方法</strong>。其<strong>基本思路</strong>是，当事件在样本中出现的频次大于某一数值 $ k$  时，运用最大似然估计法，通过减值来估计其概率值；而当事件的频次小于 $ k$  时，使用低阶的语法模型作为代替高阶语法模型的后备，但这种代替<strong>受归一化因子的约束</strong>。换句话说，就是<strong>将因减值而节省下来的概率根据低阶语法模型的分布情况分配给未见事件，而不是平均分配。</strong><br>
   以bigram为例，对于一个出现次数为 $ r=c(w^i_{i-1})$  的二元语法 $ w^i_{i-1}$  ，使用如下公式计算修正的计数：
 $$
-p_{katz}(w^i_{i-1}) = \begin{cases}
-d_r \frac {c(w_{i-1}^i)} { c(w_{i-1}) }, &amp; \text {r&gt;0} \
-\alpha (w_{i-1}) p_{ML}(w_i), &amp; \text{r=0}
-\end{cases}
-$$
-也就是说，所有具有非零计数 $ r$  的二元语法都根据折扣 $ d_r$  被减值了，折扣率 $ d_r$  近似地等于 $ \frac {r_*}r$  ，这个减值是由Good-Turing估计方法预测的。式中， $ p_{ML}(w_i)$  为 $ w_i$  的最大似然估计概率， $ \alpha (w_{i-1})$  为一个合适的值。<br>
+p_{katz}(w^i_{i-1}) =
+\begin {cases}
+d_r \dfrac {c(w_{i-1}^i)} { c(w_{i-1}) },  &amp; \text {r&gt;0} \\  \alpha (w_{i-1}) p_{ML}(w_i),  &amp; \text{r=0}
+\end {cases}
+$$</p>
+<p>也就是说，所有具有非零计数 $ r$  的二元语法都根据折扣 $ d_r$  被减值了，折扣率 $ d_r $  近似地等于 $ \dfrac {r_*}r $  ，这个减值是由Good-Turing估计方法预测的。式中， $ p_{ML}(w_i)$  为 $ w_i$  的最大似然估计概率， $ \alpha (w_{i-1})$  为一个合适的值。<br>
   折扣率 $ d_r$  可以按照如下办法计算：由于大的计数值是可靠的，因此它们不需要进行减值。尤其对于某些 $ k$  ,S. M. Katz取所有 $ r&gt;k$  的情况下的 $ d_r = 1$  ，并且建议 $ k=5$  。对于 $ r \leq k$  的情况下的折扣率，减值率由用于全局二元语法的Good-Turing估计方法计算。</p>
 <h3 id="jelinek-mercer平滑方法">Jelinek-Mercer平滑方法</h3>
 <p>  以bigram为例，将二元文法模型和一元文法模型进行<strong>线性插值</strong>：
 $$
 p_{interp}(w_i|w_{i-1}) = \lambda p_{ML}(w_i|w_{i-1}) + (1- \lambda )p_{ML}(w_i)
 $$
-其中， $ 0 \leq \lambda \leq 1$  。<br>
+其中， $ 0 \leq \lambda \leq 1 $  。<br>
   对于多元语法模型，第 $ n$  阶平滑模型递归地定义为 $ n$  阶最大似然估计模型和 $ n-1$  阶平滑模型之间的线性插值：
 $$
-p_{interp}(w_i|w ^{i-1} _{i-n+1}) =
-\lambda _{w <em>{i-n+1} ^{i-1} } p</em>{ML}(w_i|w ^{i-1} _{i-n+1})</p>
-<ul>
-<li>(1- \lambda _{w <em>{i-n+1} ^{i-1}})p</em>{interp}(w ^{i-1} _{i-n+2})
-$$</li>
-</ul>
+p_{interp}(w_i|w ^{i-1} _{i-n+1}) = \lambda _{w _{i-n+1} ^{i-1}} p _{ML} (w_i|w ^{i-1} _{i-n+1}) + (1- \lambda _{w _{i-n+1} ^{i-1}}) p _{interp} (w ^{i-1} _{i-n+2})
+$$</p>
 <h3 id="绝对减值法">绝对减值法</h3>
-<p>  绝对减值法（absolute discounting）类似于Jelinek-Mercer平滑算法，涉及高阶和低阶模型的插值问题。然而，这种方法不是采用将高阶最大似然分布乘以因子 $ \lambda w <em>{i-n+1} ^{i-1}$  的方法，而是通过从每个非零计数中减去一个固定值 $ D \leq 1$  的方法来建立高阶分布。
+<p>  绝对减值法（absolute discounting）类似于Jelinek-Mercer平滑算法，涉及高阶和低阶模型的插值问题。然而，这种方法不是采用将高阶最大似然分布乘以因子 $ \lambda w_{i-n+1}^{i-1} $  的方法，而是通过从每个非零计数中减去一个固定值 $ D \leq 1 $  的方法来建立高阶分布。<br>
 $$
-p</em>{abs}(w_i|w ^{i-1} _{i-n+1}) =
-\frac {\max{ c(w _{i-n+1} ^{i}) - D,0}}{ \sum _{w_i} c(w _{i-n+1} ^{i})}</p>
-<ul>
-<li>(1- \lambda _{w <em>{i-n+1} ^{i-1}})p</em>{abs}(w ^{i-1} _{i-n+2})
+p _{abs} (w_i|w ^{i-1} _{i-n+1}) =
+\frac {\max c(w _{i-n+1} ^{i}) - D, 0} { \sum _{w_i} c(w _{i-n+1} ^{i})} + (1- \lambda _{w _{i-n+1} ^{i-1}}) p _{abs} (w ^{i-1} _{i-n+2})
 $$
-这里假设 $ 0 \leq D \leq 1$  。</li>
-</ul>
+这里假设 $ 0 \leq D \leq 1 $  。</p>
 <h3 id="kneser-ney平滑方法">Kneser-Ney平滑方法</h3>
 <p>  这是一种扩展的绝对减值算法，用一种新的方式建立与高阶分布相结合的低阶分布。在前面的算法中，通常用平滑后的低阶最大似然分布作为低阶分布，在Kneser-Ney平滑方法中，<strong>分配给（以bigram为例）每个一元文法计数的数目就是它前面不同单词的数目</strong>。</p>
 <h3 id="修正的kneser-ney平滑方法">修正的Kneser-Ney平滑方法</h3>
@@ -562,24 +555,21 @@ $$
 <p>  基于缓存的自适应模型<strong>针对的问题</strong>是，在文本中刚刚出现过的一些词在后边的句子中再次出现的可能性往往更大，比标准的 $ n$  元语法模型预测的概率要大。<br>
   cache-based自适应方法的<strong>基本思路</strong>是：语言模型通过 $ n$  元语法的线性插值求得：
 $$
-\hat p(w_i|w_1 ^{i-1})
-= \lambda \hat p _{Cache} (w_i|w_1 ^{i-1})</p>
-<ul>
-<li>(1 - \lambda) \hat p <em>{n-gram} (w_i|w</em>{i-n+1} ^{i-1})
-$$
-  常用的方法是：在缓存中保留前面的 $ K$  个单词，每个词 $ w_i$  的概率（缓存概率）用其在缓存中出现的相对频率计算得出：
+\hat p( w_i|w _1 ^{i-1} )
+= \lambda \hat p _{Cache} ( w_i|w _1 ^{i-1} ) + ( 1 - \lambda ) \hat p _{n-gram} (w_i|w _{i-n+1} ^{i-1})
+$$</p>
+<p>  常用的方法是：在缓存中保留前面的 $ K $  个单词，每个词 $ w_i $  的概率（缓存概率）用其在缓存中出现的相对频率计算得出：
 $$
 \hat p _{Cache} (w_i|w_1 ^{i-1})
 = \frac {1}{K} \sum _{j=i-K} ^{i-1} {I _{w_j = w_i} }
 $$
-其中， $ I _{\epsilon}$  为指示器函数（indicator function）。如果 $ \epsilon$  表示的情况出现，则 $ I _{\epsilon} = 1$  ，否则， $ I _{\epsilon}=0$  。<br>
+其中， $ I _{\epsilon} $  为指示器函数（indicator function）。如果 $ \epsilon $  表示的情况出现，则 $ I _{\epsilon} = 1 $  ，否则， $ I _{\epsilon}=0 $  。<br>
   研究表明，缓存中<strong>每个词对当前词的影响随着与该词距离的增大呈指数级衰减</strong>，因此上式可写为：
 $$
 \hat p _{Cache} (w_i|w_1 ^{i-1})
 = \beta \sum _{j=1} ^{i-1} {I _{w_j = w_i} } e ^{- \alpha (i-j)}
 $$
-其中， $ \alpha$  为衰减率， $ \beta$  为归一化系数。</li>
-</ul>
+其中， $ \alpha$  为衰减率， $ \beta$  为归一化系数。</p>
 <h3 id="基于混合方法的语言模型">基于混合方法的语言模型</h3>
 <p>  <strong>针对的问题</strong>是：由于大规模训练语料本身是异源的，来自不同领域的语料存在一定的差异，而测试语料一般是同源的，因此，为了获得最佳性能，语言模型必须适应各种不同类型的语料对其性能的影响。<br>
   基于混合方法的自适应语言模型的<strong>基本思想</strong>是：将语言模型划分成 $ n$  个子模型 $ M_1,M_2, \cdots, M_n$  ，整个语言模型的概率通过下式计算得到：
