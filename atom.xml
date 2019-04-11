@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-11T12:20:21.123Z</updated>
+  <updated>2019-04-11T12:28:22.504Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/04/17/Optimizer/"/>
     <id>http://yoursite.com/2019/04/17/Optimizer/</id>
     <published>2019-04-17T11:12:03.000Z</published>
-    <updated>2019-04-11T12:20:21.123Z</updated>
+    <updated>2019-04-11T12:28:22.504Z</updated>
     
     <summary type="html">
     
@@ -89,13 +89,13 @@
       <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
     
     
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
       <category term="语料库" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%96%99%E5%BA%93/"/>
     
       <category term="WordNet" scheme="http://yoursite.com/tags/WordNet/"/>
     
       <category term="HowNet" scheme="http://yoursite.com/tags/HowNet/"/>
-    
-      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
     
   </entry>
   

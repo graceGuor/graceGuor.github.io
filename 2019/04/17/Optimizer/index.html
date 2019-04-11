@@ -90,7 +90,7 @@
 <meta property="og:description" content="本问介绍机器学习中不同优化算法之间的差异。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/NAG.png">
-<meta property="og:updated_time" content="2019-04-11T12:20:21.123Z">
+<meta property="og:updated_time" content="2019-04-11T12:28:22.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优化算法">
 <meta name="twitter:description" content="本问介绍机器学习中不同优化算法之间的差异。">
@@ -350,7 +350,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T20:20:21+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T20:28:22+08:00">
                 2019-04-11
               </time>
             
@@ -442,7 +442,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -466,7 +466,8 @@
         <p>  本问介绍机器学习中不同优化算法之间的差异。</p>
 <a id="more"></a>
 <h4 id="大概步骤">大概步骤</h4>
-<h5 id="定义：">定义：</h5>
+<p>  首先用一个框架来梳理所有的优化算法</p>
+<h5 id="定义">定义</h5>
 <p>  待优化参数： $ w $<br>
   目标函数：  $ f(w) $<br>
   初始学习率 $ \alpha $</p>
@@ -479,7 +480,7 @@
 <li>根据下降梯度进行更新： $ w_{t+1} = w_t - \eta_t $</li>
 </ol>
 <p>  步骤3、4对于各个算法都是一致的，主要的差别就体现在1和2上。</p>
-<h5 id="比较：">比较：</h5>
+<h5 id="比较">比较</h5>
 <table>
 <thead>
 <tr>
@@ -503,7 +504,7 @@
 <td></td>
 </tr>
 <tr>
-<td>$ \mathrm{NAG(Nesterov Accelerated Gradient)}$`</td>
+<td>$ \mathrm{NAG(Nesterov Accelerated Gradient)}$</td>
 <td>  在步骤1，不计算当前位置的梯度方向，而是计算如果按照累积动量走了一步，那个时候的下降方向： <br>   $ g_t=\nabla f(w_t - \dfrac { \alpha }{ \sqrt{V_{t-1}} }  \cdot m_{t-1}) $ <br>   然后用下一个点的梯度方向，与历史累积动量相结合，计算步骤2中当前时刻的累积动量。</td>
 <td></td>
 <td></td>
@@ -547,7 +548,7 @@
   <strong>实际使用过程</strong>中，参数的经验值是:$ \beta_1=0.9 $, $ \beta_2=0.999 $<br>
   初始化：$ m_0=0 $, $ V_0=0 $<br>
   这个时候我们看到，在初期， $ m_t $, $ V_t $ 都会接近于0，这个估计是有问题的。因此我们常常根据下式进行误差修正：<br>
-  $ \tilde{m}_t = m_t / (1-\beta_1^t) $ ,$ \tilde{V}_t = V_t / (1-\beta_2^t) $</p>
+  $ \tilde{m}_t = \dfrac {m_t}{1-\beta_1^t} $ , $ \tilde{V}_t = \dfrac {V_t}{1-\beta_2^t} $</p>
 <h4 id="nag与普通momentum的区别">NAG与普通momentum的区别</h4>
 <p><img src="/images/NAG.png" alt="NAG"></p>
 <h4 id="tip">Tip</h4>
@@ -830,7 +831,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#大概步骤"><span class="nav-number">1.</span> <span class="nav-text">大概步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#定义："><span class="nav-number">1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#进行迭代优化"><span class="nav-number">1.2.</span> <span class="nav-text">进行迭代优化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#比较："><span class="nav-number">1.3.</span> <span class="nav-text">比较：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指数移动平均值的偏差修正"><span class="nav-number">2.</span> <span class="nav-text">指数移动平均值的偏差修正</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nag与普通momentum的区别"><span class="nav-number">3.</span> <span class="nav-text">NAG与普通momentum的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tip"><span class="nav-number">4.</span> <span class="nav-text">Tip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#大概步骤"><span class="nav-number">1.</span> <span class="nav-text">大概步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#进行迭代优化"><span class="nav-number">1.2.</span> <span class="nav-text">进行迭代优化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#比较"><span class="nav-number">1.3.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指数移动平均值的偏差修正"><span class="nav-number">2.</span> <span class="nav-text">指数移动平均值的偏差修正</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nag与普通momentum的区别"><span class="nav-number">3.</span> <span class="nav-text">NAG与普通momentum的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tip"><span class="nav-number">4.</span> <span class="nav-text">Tip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
