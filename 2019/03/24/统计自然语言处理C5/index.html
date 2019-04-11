@@ -84,14 +84,14 @@
 <meta name="description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
 <meta name="keywords" content="NLP,语言模型,数据平滑,n-gram">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第五章 语言模型">
+<meta property="og:title" content="语言模型">
 <meta property="og:url" content="http://yoursite.com/2019/03/24/统计自然语言处理C5/index.html">
 <meta property="og:site_name" content="Grace">
 <meta property="og:description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-26T03:02:40.225Z">
+<meta property="og:updated_time" content="2019-04-11T12:15:43.414Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第五章 语言模型">
+<meta name="twitter:title" content="语言模型">
 <meta name="twitter:description" content="语言模型（language model，LM）目前主要采用的是n元语法模型（n-gram model），这种模型构建简单、直接，但同时也因为数据缺乏而必须采取平滑（smoothing）算法。   本章主要介绍n元语法的基本概念和几种常用的数据平滑方法。">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>第五章 语言模型 | Grace</title>
+  <title>语言模型 | Grace</title>
   
 
 
@@ -199,16 +199,6 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-top">
-          <a href="/top/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-signal"></i> <br>
-            
-            阅读排行
           </a>
         </li>
       
@@ -330,7 +320,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">第五章 语言模型</h2>
+          <h2 class="post-title" itemprop="name headline">语言模型</h2>
         
 
         <div class="post-meta">
@@ -358,8 +348,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-26T11:02:40+08:00">
-                2019-03-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-11T20:15:43+08:00">
+                2019-04-11
               </time>
             
           </span>
@@ -404,7 +394,7 @@
 
           
           
-             <span id="/2019/03/24/统计自然语言处理C5/" class="leancloud_visitors" data-flag-title="第五章 语言模型">
+             <span id="/2019/03/24/统计自然语言处理C5/" class="leancloud_visitors" data-flag-title="语言模型">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -590,6 +580,8 @@ $$
 $$</p>
 <h3 id="基于最大熵的语言模型">基于最大熵的语言模型</h3>
 <p>  上面介绍的两种语言模型自适应方法都是分别建立各个子模型，然后将子模型的输出结合起来。基于最大熵的语言模型却采用不同的<strong>实现思路</strong>，即通过结合不同信息源的信息构建一个语言模型。每个信息源提供一组关于模型参数的约束条件，在所有满足约束的模型中，选择熵最大的模型。</p>
+<h2 id="参考">参考</h2>
+<p>  宗成庆《统计自然语言处理》第五章</p>
 
       
     </div>
@@ -639,7 +631,7 @@ $$</p>
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/03/24/统计自然语言处理C5/" title="第五章 语言模型">http://yoursite.com/2019/03/24/统计自然语言处理C5/</a>
+    <a href="http://yoursite.com/2019/03/24/统计自然语言处理C5/" title="语言模型">http://yoursite.com/2019/03/24/统计自然语言处理C5/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -673,8 +665,8 @@ $$</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/统计自然语言处理C2/" rel="next" title="第二章 信息论基本概念">
-                <i class="fa fa-chevron-left"></i> 第二章 信息论基本概念
+              <a href="/2019/03/22/统计自然语言处理C4/" rel="next" title="语料库与语言知识库">
+                <i class="fa fa-chevron-left"></i> 语料库与语言知识库
               </a>
             
           </div>
@@ -682,6 +674,10 @@ $$</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/17/Optimizer/" rel="prev" title="优化算法">
+                优化算法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -796,7 +792,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -807,7 +803,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -818,7 +814,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -858,7 +854,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#n元语法"><span class="nav-number">1.</span> <span class="nav-text">n元语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言模型性能评价"><span class="nav-number">2.</span> <span class="nav-text">语言模型性能评价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据平滑"><span class="nav-number">3.</span> <span class="nav-text">数据平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题的提出"><span class="nav-number">3.1.</span> <span class="nav-text">问题的提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加法平滑方法"><span class="nav-number">3.2.</span> <span class="nav-text">加法平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#古德-图灵-good-turing-估计法"><span class="nav-number">3.3.</span> <span class="nav-text">古德-图灵（Good-Turing）估计法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#katz平滑方法"><span class="nav-number">3.4.</span> <span class="nav-text">Katz平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jelinek-mercer平滑方法"><span class="nav-number">3.5.</span> <span class="nav-text">Jelinek-Mercer平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对减值法"><span class="nav-number">3.6.</span> <span class="nav-text">绝对减值法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kneser-ney平滑方法"><span class="nav-number">3.7.</span> <span class="nav-text">Kneser-Ney平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修正的kneser-ney平滑方法"><span class="nav-number">3.8.</span> <span class="nav-text">修正的Kneser-Ney平滑方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平滑方法的比较"><span class="nav-number">4.</span> <span class="nav-text">平滑方法的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言模型自适应方法"><span class="nav-number">5.</span> <span class="nav-text">语言模型自适应方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于缓存的语言模型"><span class="nav-number">5.1.</span> <span class="nav-text">基于缓存的语言模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于混合方法的语言模型"><span class="nav-number">5.2.</span> <span class="nav-text">基于混合方法的语言模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于最大熵的语言模型"><span class="nav-number">5.3.</span> <span class="nav-text">基于最大熵的语言模型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#n元语法"><span class="nav-number">1.</span> <span class="nav-text">n元语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言模型性能评价"><span class="nav-number">2.</span> <span class="nav-text">语言模型性能评价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据平滑"><span class="nav-number">3.</span> <span class="nav-text">数据平滑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题的提出"><span class="nav-number">3.1.</span> <span class="nav-text">问题的提出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加法平滑方法"><span class="nav-number">3.2.</span> <span class="nav-text">加法平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#古德-图灵-good-turing-估计法"><span class="nav-number">3.3.</span> <span class="nav-text">古德-图灵（Good-Turing）估计法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#katz平滑方法"><span class="nav-number">3.4.</span> <span class="nav-text">Katz平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jelinek-mercer平滑方法"><span class="nav-number">3.5.</span> <span class="nav-text">Jelinek-Mercer平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对减值法"><span class="nav-number">3.6.</span> <span class="nav-text">绝对减值法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kneser-ney平滑方法"><span class="nav-number">3.7.</span> <span class="nav-text">Kneser-Ney平滑方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修正的kneser-ney平滑方法"><span class="nav-number">3.8.</span> <span class="nav-text">修正的Kneser-Ney平滑方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平滑方法的比较"><span class="nav-number">4.</span> <span class="nav-text">平滑方法的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言模型自适应方法"><span class="nav-number">5.</span> <span class="nav-text">语言模型自适应方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于缓存的语言模型"><span class="nav-number">5.1.</span> <span class="nav-text">基于缓存的语言模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于混合方法的语言模型"><span class="nav-number">5.2.</span> <span class="nav-text">基于混合方法的语言模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于最大熵的语言模型"><span class="nav-number">5.3.</span> <span class="nav-text">基于最大熵的语言模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -1044,7 +1040,7 @@ var jiathis_config={
         var disqus_config = function () {
           this.page.url = 'http://yoursite.com/2019/03/24/统计自然语言处理C5/';
           this.page.identifier = '2019/03/24/统计自然语言处理C5/';
-          this.page.title = '第五章 语言模型';
+          this.page.title = '语言模型';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Grace.disqus.com/embed.js';
@@ -1288,7 +1284,7 @@ var jiathis_config={
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }

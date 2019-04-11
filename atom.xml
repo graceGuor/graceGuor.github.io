@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-26T03:02:40.225Z</updated>
+  <updated>2019-04-11T12:20:21.123Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第五章 语言模型</title>
+    <title>优化算法</title>
+    <link href="http://yoursite.com/2019/04/17/Optimizer/"/>
+    <id>http://yoursite.com/2019/04/17/Optimizer/</id>
+    <published>2019-04-17T11:12:03.000Z</published>
+    <updated>2019-04-11T12:20:21.123Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  本问介绍机器学习中不同优化算法之间的差异。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Optimizer" scheme="http://yoursite.com/tags/Optimizer/"/>
+    
+      <category term="优化" scheme="http://yoursite.com/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="SGD" scheme="http://yoursite.com/tags/SGD/"/>
+    
+      <category term="Momentum" scheme="http://yoursite.com/tags/Momentum/"/>
+    
+      <category term="NAG" scheme="http://yoursite.com/tags/NAG/"/>
+    
+      <category term="Adam" scheme="http://yoursite.com/tags/Adam/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>语言模型</title>
     <link href="http://yoursite.com/2019/03/24/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C5/"/>
     <id>http://yoursite.com/2019/03/24/统计自然语言处理C5/</id>
     <published>2019-03-23T16:00:00.000Z</published>
-    <updated>2019-03-26T03:02:40.225Z</updated>
+    <updated>2019-04-11T12:15:43.414Z</updated>
     
     <summary type="html">
     
@@ -44,11 +74,37 @@
   </entry>
   
   <entry>
-    <title>第二章 信息论基本概念</title>
+    <title>语料库与语言知识库</title>
+    <link href="http://yoursite.com/2019/03/22/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C4/"/>
+    <id>http://yoursite.com/2019/03/22/统计自然语言处理C4/</id>
+    <published>2019-03-22T11:12:03.000Z</published>
+    <updated>2019-04-11T12:16:48.733Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本章介绍两个语料库，英文语料库WordNet和中文语料库HowNet。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="语料库" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%96%99%E5%BA%93/"/>
+    
+      <category term="WordNet" scheme="http://yoursite.com/tags/WordNet/"/>
+    
+      <category term="HowNet" scheme="http://yoursite.com/tags/HowNet/"/>
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>信息论基本概念</title>
     <link href="http://yoursite.com/2019/03/17/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C2/"/>
     <id>http://yoursite.com/2019/03/17/统计自然语言处理C2/</id>
     <published>2019-03-17T11:14:50.000Z</published>
-    <updated>2019-03-25T08:42:05.985Z</updated>
+    <updated>2019-04-11T12:16:03.540Z</updated>
     
     <summary type="html">
     
@@ -64,32 +120,6 @@
       <category term="信息论" scheme="http://yoursite.com/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/"/>
     
       <category term="熵" scheme="http://yoursite.com/tags/%E7%86%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第四章 语料库与语言知识库</title>
-    <link href="http://yoursite.com/2019/03/17/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C4/"/>
-    <id>http://yoursite.com/2019/03/17/统计自然语言处理C4/</id>
-    <published>2019-03-17T11:12:03.000Z</published>
-    <updated>2019-03-25T09:10:25.059Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本章介绍两个语料库，英文语料库WordNet和中文语料库HowNet。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
-    
-    
-      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
-    
-      <category term="语料库" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%96%99%E5%BA%93/"/>
-    
-      <category term="WordNet" scheme="http://yoursite.com/tags/WordNet/"/>
-    
-      <category term="HowNet" scheme="http://yoursite.com/tags/HowNet/"/>
     
   </entry>
   
