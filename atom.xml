@@ -47,6 +47,26 @@
   </entry>
   
   <entry>
+    <title>style transfer概述</title>
+    <link href="http://yoursite.com/2019/03/27/style-transfer/"/>
+    <id>http://yoursite.com/2019/03/27/style-transfer/</id>
+    <published>2019-03-27T11:12:03.000Z</published>
+    <updated>2019-04-23T04:19:37.074Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  本文对风格转换（style transfer）进行概述。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="style transfer" scheme="http://yoursite.com/categories/style-transfer/"/>
+    
+    
+      <category term="style transfer" scheme="http://yoursite.com/tags/style-transfer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>语言模型</title>
     <link href="http://yoursite.com/2019/03/24/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C5/"/>
     <id>http://yoursite.com/2019/03/24/统计自然语言处理C5/</id>
