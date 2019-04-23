@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-11T12:41:11.839Z</updated>
+  <updated>2019-04-23T04:11:58.882Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://yoursite.com/2019/04/11/Optimizer/"/>
     <id>http://yoursite.com/2019/04/11/Optimizer/</id>
     <published>2019-04-11T11:12:03.000Z</published>
-    <updated>2019-04-11T12:41:11.839Z</updated>
+    <updated>2019-04-23T04:11:58.882Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;  本问介绍机器学习中不同优化算法之间的差异。&lt;/p&gt;
+      &lt;p&gt;  本文介绍机器学习中不同优化算法之间的差异。&lt;/p&gt;
     
     </summary>
     
