@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-23T04:11:58.882Z</updated>
+  <updated>2019-04-24T10:06:10.984Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wct</title>
+    <link href="http://yoursite.com/2019/04/23/wct/"/>
+    <id>http://yoursite.com/2019/04/23/wct/</id>
+    <published>2019-04-23T14:11:23.000Z</published>
+    <updated>2019-04-24T10:06:10.984Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  本文学习任意风格只需要训练一个WCT模型，而且训练过程中不需要风格图的风格转换论文&amp;quot;Universal Style Transfer via Feature Transforms&amp;quot;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="style transfer" scheme="http://yoursite.com/categories/style-transfer/"/>
+    
+    
+      <category term="style transfer" scheme="http://yoursite.com/tags/style-transfer/"/>
+    
+      <category term="WCT" scheme="http://yoursite.com/tags/WCT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>style_swap</title>
+    <link href="http://yoursite.com/2019/04/17/style-swap/"/>
+    <id>http://yoursite.com/2019/04/17/style-swap/</id>
+    <published>2019-04-17T13:38:27.000Z</published>
+    <updated>2019-04-24T09:53:17.068Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  本文学习任意风格只需要训练一个style-swap模型的风格转换论文&amp;quot;Fast Patch-based Style Transfer of Arbitrary Style&amp;quot;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="style transfer" scheme="http://yoursite.com/categories/style-transfer/"/>
+    
+    
+      <category term="style transfer" scheme="http://yoursite.com/tags/style-transfer/"/>
+    
+      <category term="style_swap" scheme="http://yoursite.com/tags/style-swap/"/>
+    
+  </entry>
   
   <entry>
     <title>优化算法</title>
@@ -43,6 +87,28 @@
       <category term="NAG" scheme="http://yoursite.com/tags/NAG/"/>
     
       <category term="Adam" scheme="http://yoursite.com/tags/Adam/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gatys</title>
+    <link href="http://yoursite.com/2019/04/05/Gatys/"/>
+    <id>http://yoursite.com/2019/04/05/Gatys/</id>
+    <published>2019-04-05T11:12:03.000Z</published>
+    <updated>2019-04-24T09:18:02.405Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  本文学习风格转换（style transfer）祖师爷Gatys的论文&amp;quot;Image Style Transfer Using Convolutional Neural Network&amp;quot;和&amp;quot;A Neural Algorithm of Artistic Style&amp;quot;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="style transfer" scheme="http://yoursite.com/categories/style-transfer/"/>
+    
+    
+      <category term="style transfer" scheme="http://yoursite.com/tags/style-transfer/"/>
+    
+      <category term="Gatys" scheme="http://yoursite.com/tags/Gatys/"/>
     
   </entry>
   
@@ -109,13 +175,13 @@
       <category term="统计自然语言处理" scheme="http://yoursite.com/categories/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
     
     
-      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
-    
       <category term="语料库" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%96%99%E5%BA%93/"/>
     
       <category term="WordNet" scheme="http://yoursite.com/tags/WordNet/"/>
     
       <category term="HowNet" scheme="http://yoursite.com/tags/HowNet/"/>
+    
+      <category term="NLP" scheme="http://yoursite.com/tags/NLP/"/>
     
   </entry>
   

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="style transfer,style_swap,">
 
 
 
@@ -81,13 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Grace">
-<meta property="og:url" content="http://yoursite.com/tags/数据平滑/index.html">
+<meta name="description" content="本文学习任意风格只需要训练一个style-swap模型的风格转换论文&amp;quot;Fast Patch-based Style Transfer of Arbitrary Style&amp;quot;。">
+<meta name="keywords" content="style transfer,style_swap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="style_swap">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/style-swap/index.html">
 <meta property="og:site_name" content="Grace">
+<meta property="og:description" content="本文学习任意风格只需要训练一个style-swap模型的风格转换论文&amp;quot;Fast Patch-based Style Transfer of Arbitrary Style&amp;quot;。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-24T09:53:17.068Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Grace">
+<meta name="twitter:title" content="style_swap">
+<meta name="twitter:description" content="本文学习任意风格只需要训练一个style-swap模型的风格转换论文&amp;quot;Fast Patch-based Style Transfer of Arbitrary Style&amp;quot;。">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/数据平滑/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/17/style-swap/">
 
 
 
 
 
-  <title>标签: 数据平滑 | Grace</title>
+  <title>style_swap | Grace</title>
   
 
 
@@ -142,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,52 +289,485 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>数据平滑<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/style-swap/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Grace">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Grace">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/24/统计自然语言处理C5/" itemprop="url">
-              
-                <span itemprop="name">语言模型</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">style_swap</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-24T00:00:00+08:00" content="2019-03-24">
-          03-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T21:38:27+08:00">
+                2019-04-17
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T17:53:17+08:00">
+                2019-04-24
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/style-transfer/" itemprop="url" rel="index">
+                    <span itemprop="name">style transfer</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/17/style-swap/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/17/style-swap/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/17/style-swap/" class="leancloud_visitors" data-flag-title="style_swap">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>  本文学习任意风格只需要训练一个style-swap模型的风格转换论文&quot;Fast Patch-based Style Transfer of Arbitrary Style&quot;。</p>
+<a id="more"></a>
+<p>  这是<a href="https://github.com/rtqichen/style-swap" target="_blank" rel="noopener">Torch Code 作者源码</a><br>
+  <strong>Authors</strong>  ：Tian Qi Chen ，Mark Schmidt<br>
+  <strong>publication</strong> in 2016</p>
+<h1>Abstract</h1>
+<h2 id="现有问题">现有问题</h2>
+<p>  1. 对所有风格图均有效，但很贵<br>
+  2. 或者只对有限的被训练过的风格图有效</p>
+<h2 id="本文工作">本文工作</h2>
+<ul>
+<li>本文提出基于本地匹配的一种简单的优化目标：在预训练网络的某一层结合内容结构和风格纹理</li>
+<li>我们的目标有令人满意的属性如简单的优化景观、直觉参数调整和在视频中一致的逐帧性能。</li>
+<li>程序对任意内容和风格图都适用</li>
+</ul>
+<h1>Introduction</h1>
+<p>  一个经典的加速加速解决方案：训练另一个神经网络，该神经网络近似于单个前馈神经网络传递优化中的最优值。然而，目前的工作牺牲了通用性，因为前馈神经网络无法推广到训练集中没有出现过的图片。<br>
+  因此，目前的应用，要不就耗时比较长，要不就只能提供有限风格的转化。<br>
+  本文提出一个仅仅依赖于CNN某一层的新的优化目标，目前的方法使用CNN中的多层。新的目标函数使得我们使用“inverse network”确切地在风格化层逆转激活函数，然后产生风格化之后的图片。</p>
+<h1>Related work</h1>
+<h2 id="style-transfer-as-optimization">Style Transfer as Optimization</h2>
+<p>  速度慢</p>
+<h2 id="feed-forward-style-networks">Feed-forward Style Networks</h2>
+<p>  对于每一种新的风格图需要重新训练</p>
+<h2 id="style-transfer-for-video">Style Transfer for Video</h2>
+<h2 id="inverting-deep-representations">Inverting Deep Representations</h2>
+<p>  为了与已有风格转化方法进行对比，我们提出一种方法，直接重构预训练好的CNN网络中某一层的目标激活函数。<br>
+  像Li和Wand一样，我们使用一个标准在激活函数空间寻找最佳匹配patch。但是我们的方法直接构建整个激活目标。这个确切的过程使得我们的方法很容易应用到视频中，而不用考虑一致性问题。<br>
+  我们不用像素级别的loss，而是在激活函数上使用loss。<br>
+  在特定的训练设置下，逆转网络甚至可以逆转一般CNN激活函数范围之外的激活函数</p>
+<h1>A new objective for style transfer</h1>
+<p>  同样基于预训练好的VGG网络，在某一ReLU激活层进行基于patch的交换操作：将内容图片的每一个patch用与其最接近的风格patch代替。</p>
+<h2 id="style-swap">Style swap</h2>
+<h3 id="本节用到的一些符号解释">本节用到的一些符号解释</h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$  C  $</td>
+<td>内容图的RGB表示</td>
+</tr>
+<tr>
+<td>$  S  $</td>
+<td>风格图的RGB表示</td>
+</tr>
+<tr>
+<td>$  \Phi( \cdot )  $</td>
+<td>将一幅图用预训练好的VGG网络从RGB表示转换为某些中间激活层的转换函数</td>
+</tr>
+<tr>
+<td>$  \Phi( C )  $</td>
+<td>内容图的激活层表示</td>
+</tr>
+<tr>
+<td>$  \Phi( S )  $</td>
+<td>风格图的激活层表示</td>
+</tr>
+<tr>
+<td>$  \phi _i ( C )  $</td>
+<td>内容图在位置$  i  $的激活函数patch</td>
+</tr>
+<tr>
+<td>$  \phi _i ( S )  $</td>
+<td>风格图在位置$  i  $的激活函数patch</td>
+</tr>
+<tr>
+<td>$  \phi _{a,b} ( C )  $</td>
+<td>内容在位置$  a,b  $的激活函数patch：$  \Phi ( C ) _{a:a+s,b:b+s,1:d}   $,其中$  s  $代表patch size</td>
+</tr>
+<tr>
+<td>$  \phi _i ^{SS} ( C,S )  $</td>
+<td>与内容图激活patch$  i  $最接近的风格patch</td>
+</tr>
+<tr>
+<td>$  \Phi ^{SS} ( C,S )  $</td>
+<td>重构的完整内容图激活层</td>
+</tr>
+</tbody>
+</table>
+<h3 id="交换过程如下">交换过程如下</h3>
+<ol>
+<li>对内容图和风格图分别提取patch，分别用$  { \phi _i ( C ) } _{i \in n_c}  $ $  { \phi _i ( S ) } _{i \in n_s}  $表示，其中$  n_c  $ $  n_s  $为提取的patch。提取的patch应该有足够多的重叠，并包含所有激活函数channel</li>
+<li>对于每个内容激活patch，基于归一化互相关度量方法，得到与其最接近的风格patch
+$$
+\phi _i ^{SS} ( C,S ) := \mathop {\arg \max} _{\phi _j ( S ), j=1, \cdots , n_s}  {\dfrac {&lt;\phi _i ( C ), \phi _j ( S )&gt;} {||\phi _i ( C )|| \cdot ||\phi _j ( S )||} }  \text{ (1) }
+$$</li>
+<li>将每个内容激活patch $  \phi _i ( C )  $，用与其最接近的风格patch$  \phi _i ^{SS} ( C,S )  $替换</li>
+<li>重构完整的内容图激活层，用$  \Phi ^{SS} ( C,S )  $表示，重叠部分取平均值</li>
+</ol>
+<p>  这样就能得到一个既有内容图的结构，又有风格图的纹理的图片的隐藏激活层。</p>
+<h2 id="parallelizable-implementation">parallelizable implementation</h2>
+<p>  因为对于每一个内容激活函数patch的argmax操作，其归一化项是个常数，所以式(1)可以重写为</p>
+<p>$$
+K _{a,b,j} =  &lt;\phi _{a,b} ( C ), \frac {\phi _j ( S )} {||\phi _j ( S )|| } &gt;
+$$</p>
+<p>$$
+\phi _{a,b} ^{SS} ( C,S ) = \mathop {\arg \max} _{ \phi _j ( S ),j \in N_s }  { { K _{a,b,j} } }
+$$
+  内容激活函数patch归一化项的缺失可简化计算，且使得我们可以直接使用2D卷积层。</p>
+<h3 id="实现步骤">实现步骤</h3>
+<ol>
+<li>2D卷积层：$ K $ 可以用归一化后的风格激活函数patch $  \left( \dfrac { \phi _j ( S ) } { || \phi _j ( S ) || } \right)  $ 作为卷积层， $  \Phi ( C ) $ 作为输入进行卷积操作得到。计算结果 $ K $ 有 $  n_c  $ 个空间位置， $  n_s  $ 个feature channels。在每个空间位置， $ K _{ a,b } $为内容激活函数patch和所有的风格激活函数patch之间的互相关向量。</li>
+<li>channel-wise的argmax：将$ K_{a,b} $用一个one-hot向量代替
+$$
+\overline{K} _{a,b,j} =
+\begin{cases}
+1,  &amp; \text{if $j = \mathop {\arg \max} _{ j^{'} { K _{a,b,j^{'}} } } $ } \
+0, &amp; \text{otherwise}
+\end{cases}
+$$</li>
+<li>2D转置卷积层：将$ \overline{K} $作为输入，未归一化的风格激活函数patchs $  { \phi _j ( S ) }  $作为filter进行转置卷积操作。在每个空间位置，只有最匹配的风格激活函数patch在输出中，其他的patch乘以0。</li>
+</ol>
+<h2 id="optimization-formulation">optimization formulation</h2>
+<p>  合成图表示可以通过在目标激活函数$  \Phi ^{SS} ( C,S )  $上的loss来计算得到。</p>
+<p>$$
+I _{stylized} ( C,S ) = \mathop { \arg \min } _{ I \in R ^{ h×w×d } }  { || \Phi (I) - \Phi ^{ SS } ( C,S ) || _F ^2 + \lambda l _{TV} (I) }
+$$
+  合成的图的size为$  h×w×d  $，$  || \cdot || _F  $ 代表Frobenius范数，$  l _{TV} (\cdot) $ 代表total variation（全变分）正则项。</p>
+<h1>Inverse network</h1>
+<p>  inverse network的主要目的是对于任意目标激活函数，近似损失函数的最优值，因此我们定义优化逆转函数为</p>
+<p>$$
+\mathop { \arg \min } _{ f } E _H  \left [ || \Phi ( f(H) ) - H || _F ^2 + \lambda l _{ TV } ( f(H) )  \right]
+$$</p>
+<p>   $ H $ 代表目标激活函数，$ f $ 代表逆转神经网络。</p>
+<h2 id="training-the-inverse-network">Training the Inverse Network</h2>
+<p>  由于预训练好的卷积网络，有两个问题</p>
+<ol>
+<li>非单射：CNN中的卷积层、maxpooling、和ReLU层都是<strong>多对一</strong>的，因此没有合适的逆运算。类似于已有的工作，我们不训练逆转关系，而是训练一个参数化的神经网络
+$$
+\min _{ \theta } \dfrac { 1 } { n } \sum _{ i=1 } ^n  \left [ || \Phi ( f( H_i ; \theta ) ) - H_i || _F ^2 + \lambda l _{ TV } ( f( H_i ; \theta ) )  \right ]
+$$
+ $  \theta  $ 代表逆转神经网络 $  f  $ 的参数， $  H_i  $ 代表有 $  n  $ 个样本的数据集中的激活函数特征。</li>
+<li>非满射：如果逆转网络仅仅只训练了真实图片，那么逆转网络可能只能逆转在$  \Phi( \cdot )  $范围内的激活函数。鉴于我们希望逆转风格交换后的激活函数，所以我们增强训练数据集以包含这些激活函数值。</li>
+</ol>
+<h2 id="feedforward-style-transfer-procedure">Feedforward Style Transfer Procedure</h2>
+<h3 id="风格转换过程">风格转换过程</h3>
+<ol>
+<li>计算$  \Phi( C )  $和$  \Phi( S )  $</li>
+<li>通过风格交换获得$  \Phi ^{SS} ( C,S )  $</li>
+<li>将$  \Phi ^{SS} ( C,S )  $喂入训练好的逆转网络</li>
+</ol>
+<h1>Experiments</h1>
+<h2 id="style-swap-results">Style Swap Results</h2>
+<ul>
+<li>目标层为relu3_1是效果最好</li>
+<li>训练更少轮便能到达最优点</li>
+<li>随机初始化对结果影响不大</li>
+<li>比其他现有目标函数少很多局部极小值</li>
+<li>一致性：可以直接应用到视频中，而不用任何类似光流的粘合</li>
+</ul>
+<h2 id="cnn-inversion">CNN Inversion</h2>
+<ul>
+<li>$  \lambda = 10 ^{-6} $</li>
+<li>Adam</li>
+<li>learning_rate:$  10 ^ {-3} $</li>
+<li>数据增强的效果好于未增强的效果</li>
+</ul>
+<h2 id="computation-time">Computation Time</h2>
+<ul>
+<li>时间大多花费在风格交换步</li>
+<li>图片越大，花费时间越长</li>
+</ul>
+<h1>参考</h1>
+<p>  <a href="https://arxiv.org/abs/1612.04337" target="_blank" rel="noopener">Fast Patch-based Style Transfer of Arbitrary Style</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Grace 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Grace 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Grace
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/04/17/style-swap/" title="style_swap">http://yoursite.com/2019/04/17/style-swap/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/" rel="external nofollow" target="_blank">CC BY 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/style-transfer/" rel="tag"># style transfer</a>
+          
+            <a href="/tags/style-swap/" rel="tag"># style_swap</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/11/Optimizer/" rel="next" title="优化算法">
+                <i class="fa fa-chevron-left"></i> 优化算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/23/wct/" rel="prev" title="wct">
+                wct <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -337,6 +775,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -357,8 +809,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -427,6 +888,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#现有问题"><span class="nav-number">1.1.</span> <span class="nav-text">现有问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本文工作"><span class="nav-number">1.2.</span> <span class="nav-text">本文工作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Related work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#style-transfer-as-optimization"><span class="nav-number">3.1.</span> <span class="nav-text">Style Transfer as Optimization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#feed-forward-style-networks"><span class="nav-number">3.2.</span> <span class="nav-text">Feed-forward Style Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#style-transfer-for-video"><span class="nav-number">3.3.</span> <span class="nav-text">Style Transfer for Video</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inverting-deep-representations"><span class="nav-number">3.4.</span> <span class="nav-text">Inverting Deep Representations</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">A new objective for style transfer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#style-swap"><span class="nav-number">4.1.</span> <span class="nav-text">Style swap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本节用到的一些符号解释"><span class="nav-number">4.1.1.</span> <span class="nav-text">本节用到的一些符号解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交换过程如下"><span class="nav-number">4.1.2.</span> <span class="nav-text">交换过程如下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parallelizable-implementation"><span class="nav-number">4.2.</span> <span class="nav-text">parallelizable implementation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现步骤"><span class="nav-number">4.2.1.</span> <span class="nav-text">实现步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#optimization-formulation"><span class="nav-number">4.3.</span> <span class="nav-text">optimization formulation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">Inverse network</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#training-the-inverse-network"><span class="nav-number">5.1.</span> <span class="nav-text">Training the Inverse Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#feedforward-style-transfer-procedure"><span class="nav-number">5.2.</span> <span class="nav-text">Feedforward Style Transfer Procedure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#风格转换过程"><span class="nav-number">5.2.1.</span> <span class="nav-text">风格转换过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#style-swap-results"><span class="nav-number">6.1.</span> <span class="nav-text">Style Swap Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cnn-inversion"><span class="nav-number">6.2.</span> <span class="nav-text">CNN Inversion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#computation-time"><span class="nav-number">6.3.</span> <span class="nav-text">Computation Time</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -581,6 +1058,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -598,6 +1079,18 @@
       <script id="dsq-count-scr" src="https://Grace.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2019/04/17/style-swap/';
+          this.page.identifier = '2019/04/17/style-swap/';
+          this.page.title = 'style_swap';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Grace.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
