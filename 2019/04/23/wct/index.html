@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="Grace">
 <meta property="og:description" content="本文学习任意风格只需要训练一个WCT模型，而且训练过程中不需要风格图的风格转换论文&amp;quot;Universal Style Transfer via Feature Transforms&amp;quot;。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-24T10:06:10.984Z">
+<meta property="og:image" content="http://yoursite.com/images/style_transfer/%E7%AE%97%E6%B3%95wct.png">
+<meta property="og:updated_time" content="2019-04-24T10:16:52.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="wct">
 <meta name="twitter:description" content="本文学习任意风格只需要训练一个WCT模型，而且训练过程中不需要风格图的风格转换论文&amp;quot;Universal Style Transfer via Feature Transforms&amp;quot;。">
+<meta name="twitter:image" content="http://yoursite.com/images/style_transfer/%E7%AE%97%E6%B3%95wct.png">
 
 
 
@@ -348,7 +350,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T18:06:10+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T18:16:52+08:00">
                 2019-04-24
               </time>
             
@@ -476,7 +478,9 @@
   在每一个中间层，我们的目标是转换提取的内容特征，使得它们和相同层的风格特征有一样的统计特性。我们发现在这些特征上做经典的WCT转换可以实现这一目标。<br>
   我们首先利用VGG-19进行特征提取（encoder），然后训练一个对称decoder来反转VGG-19特征到原始图片，本质上就是重建图片。一旦训练完成，encoder和decoder网络在整个实验中就固定不动了。<br>
   为了进行风格转换，我们对内容特征的某一层应用WCT，使得其协方差矩阵和风格特征的协方差矩阵匹配。转换后 的特征作为decoder层的输入以获得风格化后的图片。除了单层风格化，还有多层风格化pipeline，其效果比单层的好。<br>
-  当给一个新的风格图时，我们不需要对风格图在已有的风格基础上进行微调，而是提取特征协方差矩阵，然后将它们通过WCT应用到内容特征上。</p>
+  当给一个新的风格图时，我们不需要对风格图在已有的风格基础上进行微调，而是提取特征协方差矩阵，然后将它们通过WCT应用到内容特征上。<br>
+  本文主要算法结构如下：
+<img src="/images/style_transfer/%E7%AE%97%E6%B3%95wct.png" alt="算法wct"></p>
 <h1>Proposed algorithm</h1>
 <p>  我们将风格转换表示为用特征转换（如WCT）进行图片重建的过程。</p>
 <h2 id="reconstruction-decoder">reconstruction decoder</h2>

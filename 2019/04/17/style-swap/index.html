@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="Grace">
 <meta property="og:description" content="本文学习任意风格只需要训练一个style-swap模型的风格转换论文&amp;quot;Fast Patch-based Style Transfer of Arbitrary Style&amp;quot;。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-24T09:53:17.068Z">
+<meta property="og:image" content="http://yoursite.com/images/style_transfer/%E7%AE%97%E6%B3%95ss.png">
+<meta property="og:updated_time" content="2019-04-24T10:16:56.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="style_swap">
 <meta name="twitter:description" content="本文学习任意风格只需要训练一个style-swap模型的风格转换论文&amp;quot;Fast Patch-based Style Transfer of Arbitrary Style&amp;quot;。">
+<meta name="twitter:image" content="http://yoursite.com/images/style_transfer/%E7%AE%97%E6%B3%95ss.png">
 
 
 
@@ -348,7 +350,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T17:53:17+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-24T18:16:56+08:00">
                 2019-04-24
               </time>
             
@@ -492,7 +494,9 @@
   我们不用像素级别的loss，而是在激活函数上使用loss。<br>
   在特定的训练设置下，逆转网络甚至可以逆转一般CNN激活函数范围之外的激活函数</p>
 <h1>A new objective for style transfer</h1>
-<p>  同样基于预训练好的VGG网络，在某一ReLU激活层进行基于patch的交换操作：将内容图片的每一个patch用与其最接近的风格patch代替。</p>
+<p>  同样基于预训练好的VGG网络，在某一ReLU激活层进行基于patch的交换操作：将内容图片的每一个patch用与其最接近的风格patch代替。<br>
+  本文主要算法结构如下：
+<img src="/images/style_transfer/%E7%AE%97%E6%B3%95ss.png" alt="算法ss"></p>
 <h2 id="style-swap">Style swap</h2>
 <h3 id="本节用到的一些符号解释">本节用到的一些符号解释</h3>
 <table>
