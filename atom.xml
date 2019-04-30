@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-24T10:16:52.272Z</updated>
+  <updated>2019-04-30T08:24:45.042Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>容量过拟合欠拟合</title>
+    <link href="http://yoursite.com/2019/05/01/%E5%AE%B9%E9%87%8F%E8%BF%87%E6%8B%9F%E5%90%88%E6%AC%A0%E6%8B%9F%E5%90%88/"/>
+    <id>http://yoursite.com/2019/05/01/容量过拟合欠拟合/</id>
+    <published>2019-05-01T11:18:24.000Z</published>
+    <updated>2019-04-30T08:24:45.042Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  机器学习的主要挑战是我们的算法必须能够在先前未观测的新输入上表现良好，而不只是在训练集上表现良好。在先前未观测到的输入上表现良好的能力被称为泛化（generalization）。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="容量" scheme="http://yoursite.com/tags/%E5%AE%B9%E9%87%8F/"/>
+    
+      <category term="过拟合" scheme="http://yoursite.com/tags/%E8%BF%87%E6%8B%9F%E5%90%88/"/>
+    
+      <category term="欠拟合" scheme="http://yoursite.com/tags/%E6%AC%A0%E6%8B%9F%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习算法</title>
+    <link href="http://yoursite.com/2019/04/29/%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/04/29/学习算法/</id>
+    <published>2019-04-29T11:23:58.000Z</published>
+    <updated>2019-04-30T08:30:38.348Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  Mitchell (1997) 提供了一个简洁的 &lt;strong&gt;定义&lt;/strong&gt; ：‘‘对于某类  任务 $ T $ 和 性能度量 $ P $  ，一个计算机程序被认为可以从 经验 $ E $ 中学习是指，通过经验  $ E $  改进后，它在任务 $ T $ 上由性能度量 $ P $ 衡量的性能有所提升。”&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="机器学习" scheme="http://yoursite.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="容量" scheme="http://yoursite.com/tags/%E5%AE%B9%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>wct</title>
@@ -117,7 +161,7 @@
     <link href="http://yoursite.com/2019/03/27/style-transfer/"/>
     <id>http://yoursite.com/2019/03/27/style-transfer/</id>
     <published>2019-03-27T11:12:03.000Z</published>
-    <updated>2019-04-23T04:19:37.074Z</updated>
+    <updated>2019-04-24T14:04:54.408Z</updated>
     
     <summary type="html">
     
@@ -190,7 +234,7 @@
     <link href="http://yoursite.com/2019/03/17/%E7%BB%9F%E8%AE%A1%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86C2/"/>
     <id>http://yoursite.com/2019/03/17/统计自然语言处理C2/</id>
     <published>2019-03-17T11:14:50.000Z</published>
-    <updated>2019-04-11T12:16:03.540Z</updated>
+    <updated>2019-04-30T03:10:25.715Z</updated>
     
     <summary type="html">
     
